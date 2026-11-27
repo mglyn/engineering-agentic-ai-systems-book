@@ -1,0 +1,1160 @@
+[
+  {
+    "high": 4,
+    "low": 3,
+    "count": 24,
+    "requested_service_ms": 2,
+    "events": [
+      {
+        "kind": "put",
+        "us": 143,
+        "depth": 1,
+        "sequence": 0
+      },
+      {
+        "kind": "put",
+        "us": 153,
+        "depth": 2,
+        "sequence": 1
+      },
+      {
+        "kind": "put",
+        "us": 158,
+        "depth": 3,
+        "sequence": 2
+      },
+      {
+        "kind": "put",
+        "us": 160,
+        "depth": 4,
+        "sequence": 3
+      },
+      {
+        "kind": "pause",
+        "us": 162,
+        "depth": 4
+      },
+      {
+        "kind": "take",
+        "us": 187,
+        "depth": 3,
+        "sequence": 0
+      },
+      {
+        "kind": "resume",
+        "us": 229,
+        "depth": 3
+      },
+      {
+        "kind": "put",
+        "us": 231,
+        "depth": 4,
+        "sequence": 4
+      },
+      {
+        "kind": "pause",
+        "us": 234,
+        "depth": 4
+      },
+      {
+        "kind": "present",
+        "us": 258,
+        "depth": 4,
+        "sequence": 0
+      },
+      {
+        "kind": "take",
+        "us": 264,
+        "depth": 3,
+        "sequence": 1
+      },
+      {
+        "kind": "resume",
+        "us": 284,
+        "depth": 3
+      },
+      {
+        "kind": "put",
+        "us": 286,
+        "depth": 4,
+        "sequence": 5
+      },
+      {
+        "kind": "pause",
+        "us": 288,
+        "depth": 4
+      },
+      {
+        "kind": "present",
+        "us": 300,
+        "depth": 4,
+        "sequence": 1
+      },
+      {
+        "kind": "take",
+        "us": 304,
+        "depth": 3,
+        "sequence": 2
+      },
+      {
+        "kind": "resume",
+        "us": 315,
+        "depth": 3
+      },
+      {
+        "kind": "put",
+        "us": 317,
+        "depth": 4,
+        "sequence": 6
+      },
+      {
+        "kind": "pause",
+        "us": 318,
+        "depth": 4
+      },
+      {
+        "kind": "present",
+        "us": 327,
+        "depth": 4,
+        "sequence": 2
+      },
+      {
+        "kind": "take",
+        "us": 330,
+        "depth": 3,
+        "sequence": 3
+      },
+      {
+        "kind": "resume",
+        "us": 338,
+        "depth": 3
+      },
+      {
+        "kind": "put",
+        "us": 340,
+        "depth": 4,
+        "sequence": 7
+      },
+      {
+        "kind": "pause",
+        "us": 341,
+        "depth": 4
+      },
+      {
+        "kind": "present",
+        "us": 349,
+        "depth": 4,
+        "sequence": 3
+      },
+      {
+        "kind": "take",
+        "us": 357,
+        "depth": 3,
+        "sequence": 4
+      },
+      {
+        "kind": "resume",
+        "us": 366,
+        "depth": 3
+      },
+      {
+        "kind": "put",
+        "us": 368,
+        "depth": 4,
+        "sequence": 8
+      },
+      {
+        "kind": "pause",
+        "us": 369,
+        "depth": 4
+      },
+      {
+        "kind": "present",
+        "us": 376,
+        "depth": 4,
+        "sequence": 4
+      },
+      {
+        "kind": "take",
+        "us": 379,
+        "depth": 3,
+        "sequence": 5
+      },
+      {
+        "kind": "resume",
+        "us": 387,
+        "depth": 3
+      },
+      {
+        "kind": "put",
+        "us": 389,
+        "depth": 4,
+        "sequence": 9
+      },
+      {
+        "kind": "pause",
+        "us": 390,
+        "depth": 4
+      },
+      {
+        "kind": "present",
+        "us": 397,
+        "depth": 4,
+        "sequence": 5
+      },
+      {
+        "kind": "take",
+        "us": 400,
+        "depth": 3,
+        "sequence": 6
+      },
+      {
+        "kind": "resume",
+        "us": 409,
+        "depth": 3
+      },
+      {
+        "kind": "put",
+        "us": 411,
+        "depth": 4,
+        "sequence": 10
+      },
+      {
+        "kind": "pause",
+        "us": 412,
+        "depth": 4
+      },
+      {
+        "kind": "present",
+        "us": 419,
+        "depth": 4,
+        "sequence": 6
+      },
+      {
+        "kind": "take",
+        "us": 421,
+        "depth": 3,
+        "sequence": 7
+      },
+      {
+        "kind": "resume",
+        "us": 429,
+        "depth": 3
+      },
+      {
+        "kind": "put",
+        "us": 431,
+        "depth": 4,
+        "sequence": 11
+      },
+      {
+        "kind": "pause",
+        "us": 432,
+        "depth": 4
+      },
+      {
+        "kind": "present",
+        "us": 439,
+        "depth": 4,
+        "sequence": 7
+      },
+      {
+        "kind": "take",
+        "us": 441,
+        "depth": 3,
+        "sequence": 8
+      },
+      {
+        "kind": "resume",
+        "us": 448,
+        "depth": 3
+      },
+      {
+        "kind": "put",
+        "us": 450,
+        "depth": 4,
+        "sequence": 12
+      },
+      {
+        "kind": "pause",
+        "us": 450,
+        "depth": 4
+      },
+      {
+        "kind": "present",
+        "us": 457,
+        "depth": 4,
+        "sequence": 8
+      },
+      {
+        "kind": "take",
+        "us": 460,
+        "depth": 3,
+        "sequence": 9
+      },
+      {
+        "kind": "resume",
+        "us": 467,
+        "depth": 3
+      },
+      {
+        "kind": "put",
+        "us": 468,
+        "depth": 4,
+        "sequence": 13
+      },
+      {
+        "kind": "pause",
+        "us": 470,
+        "depth": 4
+      },
+      {
+        "kind": "present",
+        "us": 479,
+        "depth": 4,
+        "sequence": 9
+      },
+      {
+        "kind": "take",
+        "us": 485,
+        "depth": 3,
+        "sequence": 10
+      },
+      {
+        "kind": "resume",
+        "us": 495,
+        "depth": 3
+      },
+      {
+        "kind": "put",
+        "us": 497,
+        "depth": 4,
+        "sequence": 14
+      },
+      {
+        "kind": "pause",
+        "us": 498,
+        "depth": 4
+      },
+      {
+        "kind": "present",
+        "us": 507,
+        "depth": 4,
+        "sequence": 10
+      },
+      {
+        "kind": "take",
+        "us": 511,
+        "depth": 3,
+        "sequence": 11
+      },
+      {
+        "kind": "resume",
+        "us": 521,
+        "depth": 3
+      },
+      {
+        "kind": "put",
+        "us": 523,
+        "depth": 4,
+        "sequence": 15
+      },
+      {
+        "kind": "pause",
+        "us": 525,
+        "depth": 4
+      },
+      {
+        "kind": "present",
+        "us": 534,
+        "depth": 4,
+        "sequence": 11
+      },
+      {
+        "kind": "take",
+        "us": 538,
+        "depth": 3,
+        "sequence": 12
+      },
+      {
+        "kind": "resume",
+        "us": 548,
+        "depth": 3
+      },
+      {
+        "kind": "put",
+        "us": 550,
+        "depth": 4,
+        "sequence": 16
+      },
+      {
+        "kind": "pause",
+        "us": 552,
+        "depth": 4
+      },
+      {
+        "kind": "present",
+        "us": 560,
+        "depth": 4,
+        "sequence": 12
+      },
+      {
+        "kind": "take",
+        "us": 564,
+        "depth": 3,
+        "sequence": 13
+      },
+      {
+        "kind": "resume",
+        "us": 574,
+        "depth": 3
+      },
+      {
+        "kind": "put",
+        "us": 576,
+        "depth": 4,
+        "sequence": 17
+      },
+      {
+        "kind": "pause",
+        "us": 577,
+        "depth": 4
+      },
+      {
+        "kind": "present",
+        "us": 586,
+        "depth": 4,
+        "sequence": 13
+      },
+      {
+        "kind": "take",
+        "us": 590,
+        "depth": 3,
+        "sequence": 14
+      },
+      {
+        "kind": "resume",
+        "us": 600,
+        "depth": 3
+      },
+      {
+        "kind": "put",
+        "us": 605,
+        "depth": 4,
+        "sequence": 18
+      },
+      {
+        "kind": "pause",
+        "us": 607,
+        "depth": 4
+      },
+      {
+        "kind": "present",
+        "us": 618,
+        "depth": 4,
+        "sequence": 14
+      },
+      {
+        "kind": "take",
+        "us": 621,
+        "depth": 3,
+        "sequence": 15
+      },
+      {
+        "kind": "resume",
+        "us": 631,
+        "depth": 3
+      },
+      {
+        "kind": "put",
+        "us": 633,
+        "depth": 4,
+        "sequence": 19
+      },
+      {
+        "kind": "pause",
+        "us": 634,
+        "depth": 4
+      },
+      {
+        "kind": "present",
+        "us": 643,
+        "depth": 4,
+        "sequence": 15
+      },
+      {
+        "kind": "take",
+        "us": 647,
+        "depth": 3,
+        "sequence": 16
+      },
+      {
+        "kind": "resume",
+        "us": 660,
+        "depth": 3
+      },
+      {
+        "kind": "put",
+        "us": 662,
+        "depth": 4,
+        "sequence": 20
+      },
+      {
+        "kind": "pause",
+        "us": 663,
+        "depth": 4
+      },
+      {
+        "kind": "present",
+        "us": 673,
+        "depth": 4,
+        "sequence": 16
+      },
+      {
+        "kind": "take",
+        "us": 677,
+        "depth": 3,
+        "sequence": 17
+      },
+      {
+        "kind": "resume",
+        "us": 687,
+        "depth": 3
+      },
+      {
+        "kind": "put",
+        "us": 688,
+        "depth": 4,
+        "sequence": 21
+      },
+      {
+        "kind": "pause",
+        "us": 692,
+        "depth": 4
+      },
+      {
+        "kind": "present",
+        "us": 704,
+        "depth": 4,
+        "sequence": 17
+      },
+      {
+        "kind": "take",
+        "us": 707,
+        "depth": 3,
+        "sequence": 18
+      },
+      {
+        "kind": "resume",
+        "us": 738,
+        "depth": 3
+      },
+      {
+        "kind": "put",
+        "us": 746,
+        "depth": 4,
+        "sequence": 22
+      },
+      {
+        "kind": "pause",
+        "us": 750,
+        "depth": 4
+      },
+      {
+        "kind": "present",
+        "us": 781,
+        "depth": 4,
+        "sequence": 18
+      },
+      {
+        "kind": "take",
+        "us": 788,
+        "depth": 3,
+        "sequence": 19
+      },
+      {
+        "kind": "resume",
+        "us": 808,
+        "depth": 3
+      },
+      {
+        "kind": "put",
+        "us": 812,
+        "depth": 4,
+        "sequence": 23
+      },
+      {
+        "kind": "present",
+        "us": 837,
+        "depth": 4,
+        "sequence": 19
+      },
+      {
+        "kind": "take",
+        "us": 936,
+        "depth": 3,
+        "sequence": 20
+      },
+      {
+        "kind": "present",
+        "us": 15995,
+        "depth": 3,
+        "sequence": 20
+      },
+      {
+        "kind": "take",
+        "us": 16010,
+        "depth": 2,
+        "sequence": 21
+      },
+      {
+        "kind": "present",
+        "us": 24090,
+        "depth": 2,
+        "sequence": 21
+      },
+      {
+        "kind": "take",
+        "us": 24100,
+        "depth": 1,
+        "sequence": 22
+      },
+      {
+        "kind": "present",
+        "us": 33324,
+        "depth": 1,
+        "sequence": 22
+      },
+      {
+        "kind": "take",
+        "us": 33335,
+        "depth": 0,
+        "sequence": 23
+      },
+      {
+        "kind": "present",
+        "us": 47489,
+        "depth": 0,
+        "sequence": 23
+      }
+    ],
+    "peak": 4,
+    "pauses": 20,
+    "elapsed_us": 47489,
+    "complete": true
+  },
+  {
+    "high": 4,
+    "low": 1,
+    "count": 24,
+    "requested_service_ms": 2,
+    "events": [
+      {
+        "kind": "put",
+        "us": 54,
+        "depth": 1,
+        "sequence": 0
+      },
+      {
+        "kind": "put",
+        "us": 57,
+        "depth": 2,
+        "sequence": 1
+      },
+      {
+        "kind": "put",
+        "us": 59,
+        "depth": 3,
+        "sequence": 2
+      },
+      {
+        "kind": "put",
+        "us": 61,
+        "depth": 4,
+        "sequence": 3
+      },
+      {
+        "kind": "pause",
+        "us": 62,
+        "depth": 4
+      },
+      {
+        "kind": "take",
+        "us": 76,
+        "depth": 3,
+        "sequence": 0
+      },
+      {
+        "kind": "present",
+        "us": 14115,
+        "depth": 3,
+        "sequence": 0
+      },
+      {
+        "kind": "take",
+        "us": 14126,
+        "depth": 2,
+        "sequence": 1
+      },
+      {
+        "kind": "present",
+        "us": 19821,
+        "depth": 2,
+        "sequence": 1
+      },
+      {
+        "kind": "take",
+        "us": 19838,
+        "depth": 1,
+        "sequence": 2
+      },
+      {
+        "kind": "resume",
+        "us": 19873,
+        "depth": 1
+      },
+      {
+        "kind": "put",
+        "us": 19879,
+        "depth": 2,
+        "sequence": 4
+      },
+      {
+        "kind": "put",
+        "us": 19882,
+        "depth": 3,
+        "sequence": 5
+      },
+      {
+        "kind": "put",
+        "us": 19891,
+        "depth": 4,
+        "sequence": 6
+      },
+      {
+        "kind": "pause",
+        "us": 19896,
+        "depth": 4
+      },
+      {
+        "kind": "present",
+        "us": 19938,
+        "depth": 4,
+        "sequence": 2
+      },
+      {
+        "kind": "take",
+        "us": 19944,
+        "depth": 3,
+        "sequence": 3
+      },
+      {
+        "kind": "present",
+        "us": 32486,
+        "depth": 3,
+        "sequence": 3
+      },
+      {
+        "kind": "take",
+        "us": 32498,
+        "depth": 2,
+        "sequence": 4
+      },
+      {
+        "kind": "present",
+        "us": 48443,
+        "depth": 2,
+        "sequence": 4
+      },
+      {
+        "kind": "take",
+        "us": 48463,
+        "depth": 1,
+        "sequence": 5
+      },
+      {
+        "kind": "resume",
+        "us": 48501,
+        "depth": 1
+      },
+      {
+        "kind": "put",
+        "us": 48508,
+        "depth": 2,
+        "sequence": 7
+      },
+      {
+        "kind": "put",
+        "us": 48511,
+        "depth": 3,
+        "sequence": 8
+      },
+      {
+        "kind": "put",
+        "us": 48513,
+        "depth": 4,
+        "sequence": 9
+      },
+      {
+        "kind": "pause",
+        "us": 48516,
+        "depth": 4
+      },
+      {
+        "kind": "present",
+        "us": 48535,
+        "depth": 4,
+        "sequence": 5
+      },
+      {
+        "kind": "take",
+        "us": 48538,
+        "depth": 3,
+        "sequence": 6
+      },
+      {
+        "kind": "present",
+        "us": 58490,
+        "depth": 3,
+        "sequence": 6
+      },
+      {
+        "kind": "take",
+        "us": 58506,
+        "depth": 2,
+        "sequence": 7
+      },
+      {
+        "kind": "present",
+        "us": 70012,
+        "depth": 2,
+        "sequence": 7
+      },
+      {
+        "kind": "take",
+        "us": 70034,
+        "depth": 1,
+        "sequence": 8
+      },
+      {
+        "kind": "resume",
+        "us": 70077,
+        "depth": 1
+      },
+      {
+        "kind": "put",
+        "us": 70085,
+        "depth": 2,
+        "sequence": 10
+      },
+      {
+        "kind": "put",
+        "us": 70088,
+        "depth": 3,
+        "sequence": 11
+      },
+      {
+        "kind": "put",
+        "us": 70090,
+        "depth": 4,
+        "sequence": 12
+      },
+      {
+        "kind": "pause",
+        "us": 70092,
+        "depth": 4
+      },
+      {
+        "kind": "present",
+        "us": 70112,
+        "depth": 4,
+        "sequence": 8
+      },
+      {
+        "kind": "take",
+        "us": 70115,
+        "depth": 3,
+        "sequence": 9
+      },
+      {
+        "kind": "present",
+        "us": 78201,
+        "depth": 3,
+        "sequence": 9
+      },
+      {
+        "kind": "take",
+        "us": 78223,
+        "depth": 2,
+        "sequence": 10
+      },
+      {
+        "kind": "present",
+        "us": 87001,
+        "depth": 2,
+        "sequence": 10
+      },
+      {
+        "kind": "take",
+        "us": 87028,
+        "depth": 1,
+        "sequence": 11
+      },
+      {
+        "kind": "resume",
+        "us": 87078,
+        "depth": 1
+      },
+      {
+        "kind": "put",
+        "us": 87085,
+        "depth": 2,
+        "sequence": 13
+      },
+      {
+        "kind": "put",
+        "us": 87089,
+        "depth": 3,
+        "sequence": 14
+      },
+      {
+        "kind": "put",
+        "us": 87092,
+        "depth": 4,
+        "sequence": 15
+      },
+      {
+        "kind": "pause",
+        "us": 87094,
+        "depth": 4
+      },
+      {
+        "kind": "present",
+        "us": 87120,
+        "depth": 4,
+        "sequence": 11
+      },
+      {
+        "kind": "take",
+        "us": 87123,
+        "depth": 3,
+        "sequence": 12
+      },
+      {
+        "kind": "present",
+        "us": 101394,
+        "depth": 3,
+        "sequence": 12
+      },
+      {
+        "kind": "take",
+        "us": 101411,
+        "depth": 2,
+        "sequence": 13
+      },
+      {
+        "kind": "present",
+        "us": 110828,
+        "depth": 2,
+        "sequence": 13
+      },
+      {
+        "kind": "take",
+        "us": 110848,
+        "depth": 1,
+        "sequence": 14
+      },
+      {
+        "kind": "resume",
+        "us": 110884,
+        "depth": 1
+      },
+      {
+        "kind": "put",
+        "us": 110890,
+        "depth": 2,
+        "sequence": 16
+      },
+      {
+        "kind": "put",
+        "us": 110897,
+        "depth": 3,
+        "sequence": 17
+      },
+      {
+        "kind": "put",
+        "us": 110899,
+        "depth": 4,
+        "sequence": 18
+      },
+      {
+        "kind": "pause",
+        "us": 110901,
+        "depth": 4
+      },
+      {
+        "kind": "present",
+        "us": 110918,
+        "depth": 4,
+        "sequence": 14
+      },
+      {
+        "kind": "take",
+        "us": 110921,
+        "depth": 3,
+        "sequence": 15
+      },
+      {
+        "kind": "present",
+        "us": 119150,
+        "depth": 3,
+        "sequence": 15
+      },
+      {
+        "kind": "take",
+        "us": 119164,
+        "depth": 2,
+        "sequence": 16
+      },
+      {
+        "kind": "present",
+        "us": 133401,
+        "depth": 2,
+        "sequence": 16
+      },
+      {
+        "kind": "take",
+        "us": 133426,
+        "depth": 1,
+        "sequence": 17
+      },
+      {
+        "kind": "resume",
+        "us": 133481,
+        "depth": 1
+      },
+      {
+        "kind": "put",
+        "us": 133489,
+        "depth": 2,
+        "sequence": 19
+      },
+      {
+        "kind": "put",
+        "us": 133494,
+        "depth": 3,
+        "sequence": 20
+      },
+      {
+        "kind": "put",
+        "us": 133497,
+        "depth": 4,
+        "sequence": 21
+      },
+      {
+        "kind": "pause",
+        "us": 133499,
+        "depth": 4
+      },
+      {
+        "kind": "present",
+        "us": 133523,
+        "depth": 4,
+        "sequence": 17
+      },
+      {
+        "kind": "take",
+        "us": 133536,
+        "depth": 3,
+        "sequence": 18
+      },
+      {
+        "kind": "present",
+        "us": 149156,
+        "depth": 3,
+        "sequence": 18
+      },
+      {
+        "kind": "take",
+        "us": 149183,
+        "depth": 2,
+        "sequence": 19
+      },
+      {
+        "kind": "present",
+        "us": 165153,
+        "depth": 2,
+        "sequence": 19
+      },
+      {
+        "kind": "take",
+        "us": 165183,
+        "depth": 1,
+        "sequence": 20
+      },
+      {
+        "kind": "resume",
+        "us": 165230,
+        "depth": 1
+      },
+      {
+        "kind": "put",
+        "us": 165244,
+        "depth": 2,
+        "sequence": 22
+      },
+      {
+        "kind": "put",
+        "us": 165247,
+        "depth": 3,
+        "sequence": 23
+      },
+      {
+        "kind": "present",
+        "us": 165274,
+        "depth": 3,
+        "sequence": 20
+      },
+      {
+        "kind": "take",
+        "us": 165277,
+        "depth": 2,
+        "sequence": 21
+      },
+      {
+        "kind": "present",
+        "us": 181864,
+        "depth": 2,
+        "sequence": 21
+      },
+      {
+        "kind": "take",
+        "us": 181887,
+        "depth": 1,
+        "sequence": 22
+      },
+      {
+        "kind": "present",
+        "us": 197591,
+        "depth": 1,
+        "sequence": 22
+      },
+      {
+        "kind": "take",
+        "us": 197613,
+        "depth": 0,
+        "sequence": 23
+      },
+      {
+        "kind": "present",
+        "us": 211026,
+        "depth": 0,
+        "sequence": 23
+      }
+    ],
+    "peak": 4,
+    "pauses": 7,
+    "elapsed_us": 211026,
+    "complete": true
+  }
+]

@@ -3,6 +3,16 @@ title: "Ch38 评估回归、故障注入与可观测测试"
 chapter: 38
 part: 9
 owner: "F"
+title_en: "Evaluation Regression, Fault Injection, and Observability Testing"
+draft_version: "zh-draft-0.2"
+updated: "2026-11-27"
+contribution: "学生 F 执笔中文稿及本章实验。章署名及单位由主编确认。"
+abstract: "两个客户端都能向用户报告完成，但其中一个可能为同一笔请求建了两张单。本章以这个发布现场的判断难题为起点，使用固定任务、独立业务查询和有顺序约束的事件轨迹建立回归切片。读者将分别改变模型响应夹具、脚本化提示与截止配置，在相同切片上找到首个不一致的决定，观察提交后取消、超时与观测记录丢失如何影响判定，并给发布方交付可以回溯到具体输入和失败原因的差异报告。"
+keywords: ["评估回归 / evaluation regression","金标切片 / golden slice","故障注入 / fault injection","轨迹断言 / trace assertion","质量门禁 / quality gate","副作用 / side effect"]
+prerequisites: ["Ch26","Ch28","Ch36","Ch37"]
+code_data: "examples/ch38/，实验环境 Python 3.12，许可见仓库 LICENSE"
+figure_table_ids: ["Fig-38-01","Fig-38-02","Fig-38-03","Tab-38-01","Tab-38-02"]
+
 status: zh-draft
 ---
 

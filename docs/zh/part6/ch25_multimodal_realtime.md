@@ -3,6 +3,16 @@ title: "Ch25 多模态交互与实时协调"
 chapter: 25
 part: 6
 owner: "F"
+title_en: "Multimodal Interaction and Real-Time Coordination"
+draft_version: "zh-draft-0.2"
+updated: "2026-11-27"
+contribution: "学生 F 执笔中文稿及本章实验。章署名及单位由主编确认。"
+abstract: "用户指着屏幕说要核对右边那张车票。方向识别正确，助手仍可能选中上一页的票据。本章沿这一次指向分别记录语音、页面、文件以及接收端时钟，将词语所指的对象与说话当时可见的页面绑定。读者将回放二十组构造输入，分别检查证据充分时选对对象、证据不足时请求澄清的能力，再比较音频和字幕在抖动条件下的呈现时差。实验保留原始素材和受控事件，以便区分时序决策错误与模型识别错误。"
+keywords: ["多模态 / multimodality","指代消解 / reference resolution","端点检测 / endpointing","抖动缓冲 / jitter buffer","轮次交替 / turn-taking","媒体同步 / media synchronization"]
+prerequisites: ["Ch23","Ch24"]
+code_data: "examples/ch25/，实验环境 Python 3.12，许可见仓库 LICENSE"
+figure_table_ids: ["Fig-25-01","Fig-25-02","Tab-25-01","Tab-25-02"]
+
 status: zh-draft
 ---
 

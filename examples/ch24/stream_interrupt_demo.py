@@ -1,8 +1,7 @@
-"""A local producer, a controlled consumer and a delayed tool receipt.
-Run from repository root: python examples/ch24/stream_interrupt_demo.py
-"""
+"""Replay forty controlled stop schedules against three local stream consumers."""
 import argparse
 import asyncio
+from dataclasses import asdict, dataclass
 from itertools import product
 import json
 from pathlib import Path
@@ -10,99 +9,136 @@ from time import perf_counter_ns
 
 PHASES = ("before_start", "full_queue", "in_flight", "after_commit", "after_complete")
 MODES = ("ui_only", "propagate", "fenced")
+OLD = ("turn-1", 1)
+NEW = ("turn-2", 2)
+
+
+@dataclass(frozen=True)
+class Frame:
+    turn_id: str
+    generation: int
+    sequence: int
+    value: str
+
+    @property
+    def owner(self):
+        return self.turn_id, self.generation
+
+
+def metrics(events):
+    stop = next(i for i, event in enumerate(events) if event["kind"] == "user_stop")
+    origin = events[stop]["us"]
+
+    def offset(kind):
+        event = next((e for e in events if e["kind"] == kind), None)
+        return event["us"] - origin if event is not None else None
+
+    late = [e for e in events[stop:] if e["kind"] == "present"
+            and (e["turn_id"], e["generation"]) == OLD]
+    return dict(ui_ack_us=offset("ui_ack"), cancel_sent_us=offset("cancel_sent"),
+                cancel_received_us=offset("cancel_received"), producer_exit_us=offset("producer_exit"),
+                producer_joined_us=offset("producer_joined"), last_old_us=late[-1]["us"] - origin if late else None,
+                old_count=len(late), cleared=sum(e["kind"] == "cleared" for e in events),
+                rejected_at_sink=sum(e["kind"] == "obsolete" for e in events))
 
 
 async def trial(phase, capacity, medium, repeat, mode):
     start = perf_counter_ns()
     events = []
     queue = asyncio.Queue(maxsize=capacity)
-    ready = asyncio.Event()
-    accepted = 1
+    high_water = asyncio.Event()
+    accepted = OLD
     receipt_store = {}
     visible = []
     parked = []
-    paused_at_high = False
     stopped = False
 
     def log(kind, **fields):
         events.append(dict(us=(perf_counter_ns() - start) // 1000, kind=kind, **fields))
 
     def present(frame):
-        generation, value = frame
-        if mode == "fenced" and generation != accepted:
-            log("obsolete", generation=generation, value=value)
+        if mode == "fenced" and frame.owner != accepted:
+            log("obsolete", **asdict(frame))
             return
         visible.append(frame)
-        log("present", generation=generation, value=value)
+        log("present", **asdict(frame))
+
+    def take():
+        frame = queue.get_nowait()
+        log("dequeued", **asdict(frame), depth=queue.qsize())
+        return frame
 
     async def produce():
-        nonlocal paused_at_high
         try:
             for i in range(capacity + 2):
+                frame = Frame(*OLD, i, f"{medium}-{i}")
+                log("produced", **asdict(frame))
                 if queue.full():
-                    paused_at_high = True
-                    ready.set()
-                await queue.put((1, f"{medium}-{i}"))
-                log("enqueued", depth=queue.qsize())
+                    high_water.set()
+                await queue.put(frame)
+                log("enqueued", **asdict(frame), depth=queue.qsize())
+        except asyncio.CancelledError:
+            log("cancel_received")
+            raise
         finally:
             log("producer_exit")
 
-    async def drain():
-        while not producer.done() or not queue.empty():
+    async def drain_while_producing():
+        while not producer.done():
             if not queue.empty():
-                present(await queue.get())
+                present(take())
             await asyncio.sleep(0)
 
-    # No yield before before_start: cancellation can precede coroutine entry.
     producer = asyncio.create_task(produce())
     if phase != "before_start":
-        await ready.wait()
+        await high_water.wait()
     if phase == "in_flight":
-        parked.append(await queue.get())
+        parked.append(take())
     if phase == "after_complete":
-        await drain()
+        await drain_while_producing()
+        while not queue.empty():
+            present(take())
     if phase == "after_commit":
         receipt_store["T-DEMO-01:1:create"] = "ticket-1"
-        log("tool_committed")
+        log("tool_committed", operation_id="T-DEMO-01:1:create")
 
     def stop():
         nonlocal accepted, stopped
-        log("user_stop")
+        log("user_stop", turn_id=OLD[0], generation=OLD[1])
         if stopped:
             log("duplicate_stop")
             return
         stopped = True
         log("ui_ack")
-        if mode != "ui_only":
-            producer.cancel()
-            log("cancel_sent")
         if mode == "fenced":
-            accepted += 1
+            accepted = NEW
+        if mode != "ui_only":
+            delivered = producer.cancel()
+            log("cancel_sent", task_accepted_request=delivered)
+        if mode == "fenced":
             while not queue.empty():
-                queue.get_nowait()
-                log("cleared")
+                log("cleared", **asdict(queue.get_nowait()))
 
     stop()
     if repeat:
         stop()
     if mode == "ui_only":
-        await drain()
-    else:
-        try:
-            await producer
-        except asyncio.CancelledError:
-            pass
-        while not queue.empty():
-            present(await queue.get())
+        await drain_while_producing()
+    try:
+        await producer
+    except asyncio.CancelledError:
+        pass
     log("producer_joined")
+    while not queue.empty():
+        present(take())
     for frame in parked:
         present(frame)
     if receipt_store:
         log("receipt_recorded", operation_id=next(iter(receipt_store)))
-        present((1, "old-receipt"))
-    present((2, "new-turn"))
-    stop_idx = next(i for i, e in enumerate(events) if e["kind"] == "user_stop")
-    residual = [e for e in events[stop_idx:] if e["kind"] == "present" and e["generation"] == 1]
+        present(Frame(*OLD, capacity + 2, "old-receipt"))
+    new_frame = Frame(*NEW, 0, "new-turn")
+    present(new_frame)
+
     expected = {
         "before_start": capacity + 2 if mode == "ui_only" else 0,
         "full_queue": capacity + 2 if mode == "ui_only" else capacity,
@@ -110,13 +146,15 @@ async def trial(phase, capacity, medium, repeat, mode):
         "after_commit": capacity + 3 if mode == "ui_only" else capacity + 1,
         "after_complete": 0,
     }[phase] if mode != "fenced" else 0
+    observed = metrics(events)
+    checks = dict(old_count=expected == observed["old_count"], new_frame=visible.count(new_frame) == 1,
+                  resources=producer.done() and queue.empty(),
+                  receipt=len(receipt_store) == int(phase == "after_commit"))
     return dict(phase=phase, capacity=capacity, medium=medium, repeated_stop=repeat,
-                mode=mode, events=events, high_water_reached=paused_at_high,
-                expected_old=expected, actual_old=len(residual),
-                old_tail_us=residual[-1]["us"] - events[stop_idx]["us"] if residual else 0,
-                passed=(expected == len(residual) and visible.count((2, "new-turn")) == 1
-                        and producer.done() and queue.empty()
-                        and len(receipt_store) == int(phase == "after_commit")))
+                mode=mode, events=events, high_water_reached=high_water.is_set(),
+                expected_old=expected, actual_old=observed["old_count"],
+                old_tail_us=observed["last_old_us"] or 0, measurements=observed, checks=checks,
+                errors=[key for key, ok in checks.items() if not ok], passed=all(checks.values()))
 
 
 async def main(output):

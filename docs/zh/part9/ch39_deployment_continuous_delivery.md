@@ -3,6 +3,16 @@ title: "Ch39 部署演练、持续交付与工程综合实践"
 chapter: 39
 part: 9
 owner: "F"
+title_en: "Deployment Drills, Continuous Delivery, and Engineering Capstone"
+draft_version: "zh-draft-0.2"
+updated: "2026-11-27"
+contribution: "学生 F 执笔中文稿及本章实验。章署名及单位由主编确认。"
+abstract: "旧程序已经换回，观察员的角色清单也已更新，他为什么还会被应用识别为可以审批？本章将回归证据交给预发布驱动，在同一份本地工单库上完成受控发布、配置错配、局部回滚和完整恢复。读者将分别检查制品、配置、业务数据、权威身份与实际生效的权限，复现漏跑测试和日志标记触发的阻断，并按观测时点解释迟到告警。最后整理三项目运行记录，说明哪些条件可以由程序核查，哪些决定需要有权限的人员签署。"
+keywords: ["持续交付 / continuous delivery","预发布 / staging","回滚 / rollback","制品 / artifact","权限缓存 / permission cache","恢复验收 / recovery verification"]
+prerequisites: ["Ch30","Ch34","Ch36","Ch37","Ch38"]
+code_data: "examples/ch39/，实验环境 Python 3.12，许可见仓库 LICENSE"
+figure_table_ids: ["Fig-39-01","Fig-39-02","Fig-39-03","Tab-39-01","Tab-39-02"]
+
 status: zh-draft
 ---
 

@@ -3,6 +3,16 @@ title: "Ch23 会话、事件与状态机"
 chapter: 23
 part: 6
 owner: "F"
+title_en: "Sessions, Events, and State Machines"
+draft_version: "zh-draft-0.2"
+updated: "2026-11-27"
+contribution: "学生 F 执笔中文稿及本章实验。章署名及单位由主编确认。"
+abstract: "工单已经建成，用户却在收到回执前断线。用户重连时，界面需要补齐哪段历史，客户端又凭什么决定能否重新建单？本章从这笔申请还原命令、事件、快照与当前视图之间的关系。读者将用一个确定性归约函数恢复三种终态，处理投递乱序、重复、缺口和旧版快照，并在独立的数据库连接上核对工单与审计记录。比较只读回放、使用原操作身份重试以及换键提交，可以检验恢复流程是否增加了业务作用。"
+keywords: ["会话 / session","事件 / event","快照 / snapshot","重放 / replay","状态机 / state machine","幂等性 / idempotency"]
+prerequisites: ["Ch14","Ch22"]
+code_data: "examples/ch23/，实验环境 Python 3.12，许可见仓库 LICENSE"
+figure_table_ids: ["Fig-23-01","Fig-23-02","Tab-23-01","Tab-23-02"]
+
 status: zh-draft
 ---
 

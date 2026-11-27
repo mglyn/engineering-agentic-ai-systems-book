@@ -3,6 +3,16 @@ title: "Ch22 智能体编排与执行运行时"
 chapter: 22
 part: 6
 owner: "F"
+title_en: "Agent Orchestration and Execution Runtimes"
+draft_version: "zh-draft-0.2"
+updated: "2026-11-27"
+contribution: "学生 F 执笔中文稿及本章实验。章署名及单位由主编确认。"
+abstract: "财务批处理占满了工单助手的服务端点，新来的交互申请要等多久才能看到第一项结果？本章从同一份带依赖的任务表出发，跟踪任务在调度器、就绪队列、执行者和下游端点之间的等待。读者将在两个租户共享的模拟端点上比较串行、无界和有界派发，读出吞吐与不同租户的等待代价，再从运行轨迹重建资源占用。取消、超时和执行者退出分别留下不同的恢复证据，可据此决定哪些工作允许重派。"
+keywords: ["编排 / orchestration","依赖图 / dependency graph","就绪队列 / ready queue","背压 / backpressure","公平性 / fairness","任务租约 / task lease"]
+prerequisites: ["Ch09","Ch12"]
+code_data: "examples/ch22/，实验环境 Python 3.12，许可见仓库 LICENSE"
+figure_table_ids: ["Fig-22-01","Fig-22-02","Tab-22-01","Tab-22-02","Tab-22-03"]
+
 status: zh-draft
 ---
 
