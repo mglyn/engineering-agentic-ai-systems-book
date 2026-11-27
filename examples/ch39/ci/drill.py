@@ -22,9 +22,13 @@ def write(path, value):
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
-def command(*args, env=None):
-    result = subprocess.run([sys.executable, *map(str, args)], cwd=ROOT, env=env,
+def invoke(*args, env=None):
+    return subprocess.run([sys.executable, *map(str, args)], cwd=ROOT, env=env,
                             capture_output=True, encoding="utf-8", errors="replace", timeout=180)
+
+
+def command(*args, env=None):
+    result = invoke(*args, env=env)
     if result.returncode:
         raise RuntimeError(f"subprocess exited {result.returncode}: {result.stderr[-1500:]} {result.stdout[-1500:]}")
     return result.stdout
@@ -51,17 +55,30 @@ def run(out, fault):
     if fault != "skip-tests":
         env = dict(os.environ, PYTHONPATH=str(EXAMPLES / "ch36/src"), PYTHONUTF8="1")
         tests = command("-m", "pytest", "-q", "examples/ch37/tests/test_behaviour.py", env=env).strip()
-    command(EXAMPLES / "ch38/regression_runner/run.py", "--output", out / "gate.json")
-    gate = read(out / "gate.json")
+    candidate = "client-change" if fault == "client-regression" else "baseline"
+    gate_path = out / "gate.json"
+    gate_run = invoke(EXAMPLES / "ch38/regression_runner/run.py", "--candidate", candidate,
+                      "--output", gate_path)
+    if not gate_path.is_file():
+        raise RuntimeError(f"gate did not produce evidence: {gate_run.stderr[-1500:]}")
+    gate = read(gate_path)
+    required = [row["id"] for row in read(EXAMPLES / "ch38/golden_slices.yaml")]
+    failed = [row["id"] for row in gate["rows"] if not row["passed"]]
+    complete_gate = (gate["schema"] == "book-gate-1" and gate["recipe"] == candidate
+                     and sorted(row["id"] for row in gate["rows"]) == sorted(required))
+    passed_gate = complete_gate and gate_run.returncode == 0 and gate["decision"] == "pass" and not failed
+    gate_evidence = dict(file=gate_path.name, sha256=hashlib.sha256(gate_path.read_bytes()).hexdigest(),
+                         recipe=gate["recipe"], config_digest=gate["config_digest"], failed=failed,
+                         decision=gate["decision"], exit_code=gate_run.returncode, complete=complete_gate)
     checks = dict(projects=read(out / "projects/reproduction.json")["passed"],
-                  tests=tests != "absent", regression=gate["decision"] == "pass" and len(gate["rows"]) == 12)
+                  tests=tests != "absent", regression=passed_gate)
     log = (["build complete", "candidate ready"] if fault != "log-marker"
            else ["build complete", "diagnostic " + CANARY])
     log_path = out / "build.log"
     log_path.write_text("\n".join(log), encoding="utf-8")
     checks["log_marker_absent"] = CANARY not in log_path.read_text(encoding="utf-8")
     report = dict(scope="local stdio processes; fixed model; course fixtures",
-                  artifacts=versions, tests=tests, gates=checks, human_review="pending",
+                  artifacts=versions, regression_evidence=gate_evidence, tests=tests, gates=checks, human_review="pending",
                   timeline=[], production_authorized=False)
     if not all(checks.values()):
         report["result"] = "hold"
@@ -117,7 +134,7 @@ def run(out, fault):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", required=True, type=Path)
-    parser.add_argument("--fault", choices=["none", "skip-tests", "log-marker"], default="none")
+    parser.add_argument("--fault", choices=["none", "skip-tests", "log-marker", "client-regression"], default="none")
     args = parser.parse_args()
     ok = run(args.output.resolve(), args.fault)
     print(read(args.output / "release.json")["result"])

@@ -27,14 +27,16 @@ def digest(value):
                                      separators=(",", ":")).encode()).hexdigest()
 
 
-BASE = {"model": "fixed-v1", "prompt": "include both policy clauses", "deadline_ms": 5000}
+BASE = {"model": "fixed-v1", "prompt": "include both policy clauses", "deadline_ms": 5000, "client": "single-send"}
 RECIPES = {"baseline": BASE, "model-change": BASE | {"model":"fixed-v2"},
            "prompt-change": BASE | {"prompt":"include first policy clause"},
-           "config-change": BASE | {"deadline_ms":900}}
+           "config-change": BASE | {"deadline_ms":900},
+           "client-change": BASE | {"client":"repeat-after-success"}}
 
 
 class ToolAdapter:
-    def __init__(self, service, fault):
+    def __init__(self, service, fault, client):
+        self.client = client
         self.service, self.fault = service, fault
         self.calls = []
 
@@ -50,7 +52,11 @@ class ToolAdapter:
         if self.fault == "rate_limited":
             self.fault = None
             raise TimeoutError("local quota exhausted; retry on next invocation")
-        return self.service.create(*args)
+        result = self.service.create(*args)
+        if self.client == "repeat-after-success":
+            self.calls.append("create")
+            return self.service.create(*args)
+        return result
 
     def verify(self, *args):
         self.calls.append("verify")
@@ -65,11 +71,11 @@ def observe(folder):
     with closing(sqlite3.connect((folder/"service.sqlite").as_uri()+"?mode=ro", uri=True)) as db:
         tickets = [dict(tenant=t, key=k, payload=json.loads(p), approved_digest=a)
                    for t,k,p,a in db.execute("SELECT tenant,operation_id,payload_json,approved_digest FROM tickets")]
-        creates = db.execute("SELECT COUNT(*) FROM service_events WHERE kind='created'").fetchone()[0]
+        service_counts = dict(db.execute("SELECT kind,COUNT(*) FROM service_events GROUP BY kind"))
     with closing(sqlite3.connect((folder/"session.sqlite").as_uri()+"?mode=ro", uri=True)) as db:
         trace = [dict(sequence=n,tenant=t,task_id=i,kind=k,details=json.loads(d))
                  for n,t,i,k,d in db.execute("SELECT * FROM events ORDER BY sequence")]
-    return tickets, creates, trace
+    return tickets, service_counts, trace
 
 
 def trace_errors(trace, expected, task, rules, injected):
@@ -113,7 +119,7 @@ def execute(folder, gold, recipe, rules, matrix):
     pending_fault = case
     for attempt in range(2):
         with closing(SessionStore(folder/"session.sqlite")) as store, closing(TicketService(folder/"service.sqlite")) as service:
-            adapter = ToolAdapter(service, pending_fault)
+            adapter = ToolAdapter(service, pending_fault, recipe["client"])
             engine = Engine(store, adapter, model, ControlledClock(1000), policy, deadline_ms=recipe["deadline_ms"])
             hook = case if attempt == 0 and case in {"response_lost","after_commit","cancel_after_commit"} else None
             try:
@@ -125,8 +131,14 @@ def execute(folder, gold, recipe, rules, matrix):
         pending_fault = None
         if checkpoints[-1] not in {"pending","interrupted"}:
             break
-    tickets, creates, trace = observe(folder)
+    tickets, service_counts, trace = observe(folder)
+    creates = service_counts.get("created", 0)
+    replays = service_counts.get("replayed", 0)
     errors = []
+    if calls != gold["calls"]:
+        errors.append("tool_sequence")
+    if replays > rules["allowed_service_replays"]:
+        errors.append("unexpected_resend")
     if state["status"] != gold["status"]:
         errors.append("status")
     if gold["reason"] and state["reason"] != gold["reason"]:
@@ -142,7 +154,7 @@ def execute(folder, gold, recipe, rules, matrix):
         errors.append("lost_event_undetected")
     errors.extend(trace_errors(trace, gold, task, rules, matrix.get(case)))
     return dict(id=case, status=state["status"], reason=state["reason"], checkpoints=checkpoints,
-                reply=reply, calls=calls, tickets=tickets, creates=creates, trace=trace,
+                reply=reply, calls=calls, tickets=tickets, creates=creates, replays=replays, trace=trace,
                 initial_trace_errors=initial_errors, errors=errors, passed=not errors)
 
 

@@ -1,0 +1,234 @@
+{
+  "candidate": "client-change",
+  "changed": {
+    "client": [
+      "single-send",
+      "repeat-after-success"
+    ]
+  },
+  "differences": [
+    {
+      "id": "after_commit",
+      "old_reason": null,
+      "new_reason": null,
+      "failures": [
+        "tool_sequence",
+        "unexpected_resend"
+      ],
+      "old_event": [],
+      "new_event": [],
+      "old_count": 1,
+      "new_count": 1,
+      "old_calls": [
+        "lookup",
+        "create",
+        "lookup",
+        "verify"
+      ],
+      "new_calls": [
+        "lookup",
+        "create",
+        "create",
+        "lookup",
+        "verify"
+      ],
+      "old_replays": 0,
+      "new_replays": 1
+    },
+    {
+      "id": "cancel_after_commit",
+      "old_reason": "user_cancelled",
+      "new_reason": "user_cancelled",
+      "failures": [
+        "tool_sequence",
+        "unexpected_resend"
+      ],
+      "old_event": [],
+      "new_event": [],
+      "old_count": 1,
+      "new_count": 1,
+      "old_calls": [
+        "lookup",
+        "create",
+        "lookup"
+      ],
+      "new_calls": [
+        "lookup",
+        "create",
+        "create",
+        "lookup"
+      ],
+      "old_replays": 0,
+      "new_replays": 1
+    },
+    {
+      "id": "lookup_timeout",
+      "old_reason": null,
+      "new_reason": null,
+      "failures": [
+        "tool_sequence",
+        "unexpected_resend"
+      ],
+      "old_event": [],
+      "new_event": [],
+      "old_count": 1,
+      "new_count": 1,
+      "old_calls": [
+        "lookup",
+        "lookup",
+        "create",
+        "verify"
+      ],
+      "new_calls": [
+        "lookup",
+        "lookup",
+        "create",
+        "create",
+        "verify"
+      ],
+      "old_replays": 0,
+      "new_replays": 1
+    },
+    {
+      "id": "ordinary",
+      "old_reason": null,
+      "new_reason": null,
+      "failures": [
+        "tool_sequence",
+        "unexpected_resend"
+      ],
+      "old_event": [],
+      "new_event": [],
+      "old_count": 1,
+      "new_count": 1,
+      "old_calls": [
+        "lookup",
+        "create",
+        "verify"
+      ],
+      "new_calls": [
+        "lookup",
+        "create",
+        "create",
+        "verify"
+      ],
+      "old_replays": 0,
+      "new_replays": 1
+    },
+    {
+      "id": "rate_limited",
+      "old_reason": null,
+      "new_reason": null,
+      "failures": [
+        "tool_sequence",
+        "unexpected_resend"
+      ],
+      "old_event": [],
+      "new_event": [],
+      "old_count": 1,
+      "new_count": 1,
+      "old_calls": [
+        "lookup",
+        "create",
+        "lookup",
+        "create",
+        "verify"
+      ],
+      "new_calls": [
+        "lookup",
+        "create",
+        "lookup",
+        "create",
+        "create",
+        "verify"
+      ],
+      "old_replays": 0,
+      "new_replays": 1
+    },
+    {
+      "id": "response_lost",
+      "old_reason": null,
+      "new_reason": null,
+      "failures": [
+        "tool_sequence",
+        "unexpected_resend"
+      ],
+      "old_event": [],
+      "new_event": [],
+      "old_count": 1,
+      "new_count": 1,
+      "old_calls": [
+        "lookup",
+        "create",
+        "lookup",
+        "verify"
+      ],
+      "new_calls": [
+        "lookup",
+        "create",
+        "create",
+        "lookup",
+        "verify"
+      ],
+      "old_replays": 0,
+      "new_replays": 1
+    },
+    {
+      "id": "trace_export_loss",
+      "old_reason": null,
+      "new_reason": null,
+      "failures": [
+        "tool_sequence",
+        "unexpected_resend"
+      ],
+      "old_event": [],
+      "new_event": [],
+      "old_count": 1,
+      "new_count": 1,
+      "old_calls": [
+        "lookup",
+        "create",
+        "verify"
+      ],
+      "new_calls": [
+        "lookup",
+        "create",
+        "create",
+        "verify"
+      ],
+      "old_replays": 0,
+      "new_replays": 1
+    },
+    {
+      "id": "wrong_result",
+      "old_reason": null,
+      "new_reason": null,
+      "failures": [
+        "tool_sequence",
+        "unexpected_resend"
+      ],
+      "old_event": [],
+      "new_event": [],
+      "old_count": 1,
+      "new_count": 1,
+      "old_calls": [
+        "lookup",
+        "create",
+        "verify",
+        "lookup",
+        "verify"
+      ],
+      "new_calls": [
+        "lookup",
+        "create",
+        "create",
+        "verify",
+        "lookup",
+        "verify"
+      ],
+      "old_replays": 0,
+      "new_replays": 1
+    }
+  ],
+  "decision": "hold"
+}

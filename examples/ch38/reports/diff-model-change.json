@@ -17,7 +17,11 @@
       "old_event": [],
       "new_event": [],
       "old_count": 0,
-      "new_count": 0
+      "new_count": 0,
+      "old_calls": [],
+      "new_calls": [],
+      "old_replays": 0,
+      "new_replays": 0
     }
   ],
   "decision": "hold"

@@ -20,5 +20,6 @@
     "task_id",
     "kind",
     "details"
-  ]
+  ],
+  "allowed_service_replays": 0
 }

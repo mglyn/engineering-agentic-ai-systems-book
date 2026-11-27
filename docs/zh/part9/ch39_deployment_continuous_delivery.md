@@ -115,6 +115,14 @@ python examples/ch39/ci/drill.py --output outputs/ch39/log-01 --fault log-marker
 
 把演练搬到多人共享的预发布服务，还要交代流量如何隔离、谁能执行回退、是否有足够样本观测候选、正式凭据由谁注入。固定响应可以反复命中同一事故位置；真实模型对语义、提示与工具选择的影响属于另一组实验，需要登记模型、数据、抽样次数与失败分布。第 39 章没有据此测量模型质量、并发容量或真实生产恢复时间。
 
+再把上一章的缺陷客户端真正送进同一个发布入口。它在成功建单后多发一次相同操作，仍会返回原工单。发布人在这个环节能不能看到上一章已经定位的八个差异？
+
+```shell
+python examples/ch39/ci/drill.py --output outputs/ch39/client-01 --fault client-regression
+```
+
+应输出 hold，退出 1。打开 release.json，gates.regression 为假，timeline 为空，说明流程在切换预发布制品前停止。regression_evidence 保留发生失败的八个切片、实际子进程退出码、候选配置摘要，以及同目录 gate.json 的文件摘要。按这个引用打开报告，可以直接从 ordinary 切片的重放审计开始调查。若文件缺失或子进程本身没有产出报告，需按执行异常处理；空报告不能解释为业务断言成功或失败。两次放行演练即使使用相同的制品，携带的回归证据也需逐次核对。
+
 ## 39.6 接班人拿到什么
 
 交接包位于 `examples/ch39/`。release_checklist.md 说明发布前查什么，rollback_runbook.md 说明事故后按什么顺序查，release_report.md 对照已运行的三种结果，final_capstone_rubric.md 供教师或另一组同学验收。原始记录保留机器决定和人工审阅状态。另一位同学可以在干净检出中重新运行，核对逻辑结果，记录环境差异并撰写自己的审阅意见。[附录 C 接口](../appendix_c_schemas.md) · [附录 D 部署](../appendix_d_deployment.md) · [附录 F 安全](../appendix_f_security.md)

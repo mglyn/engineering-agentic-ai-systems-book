@@ -30,7 +30,9 @@ def compare(base, candidate):
             rows.append(dict(id=name, old_reason=a["reason"], new_reason=b["reason"], failures=b["errors"],
                              old_event=left[pos:pos+1] if pos is not None else [],
                              new_event=right[pos:pos+1] if pos is not None else [],
-                             old_count=a["creates"], new_count=b["creates"]))
+                             old_count=a["creates"], new_count=b["creates"],
+                             old_calls=a["calls"], new_calls=b["calls"],
+                             old_replays=a.get("replays"), new_replays=b.get("replays")))
     return dict(candidate=candidate["recipe"], changed=delta, differences=rows, decision=candidate["decision"])
 
 

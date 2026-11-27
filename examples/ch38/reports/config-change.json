@@ -4,14 +4,15 @@
   "config": {
     "model": "fixed-v1",
     "prompt": "include both policy clauses",
-    "deadline_ms": 900
+    "deadline_ms": 900,
+    "client": "single-send"
   },
-  "config_digest": "61978b138e00e9daaa9c65b017a650ebd0ee43a6a15fa5b304a779157c8c1020",
+  "config_digest": "108f1cfa08e6af6331d03c10c1411fe8052e4de653de269cae21be91a83536b0",
   "inputs": {
-    "examples/ch38/golden_slices.yaml": "a350f9dba494984b0a0666212ca3902fff4cc08841fffa9300c812be56da14d1",
-    "examples/ch38/trace_assertions.yaml": "3a9326d6507cef63928f6cb1e97194f3cd7427ba9b470ffbbe77406fb1cdd06d",
-    "examples/ch38/fault_injection_matrix.yaml": "1729815fc0657698cd307031a5e1f8ed935678b8b2026620505b5e5df9ed0ebf",
-    "examples/ch38/regression_runner/run.py": "1d92e23ac0604ea4261b8e75fb4671a081d5271197f3884a5e154fc3783adfb1",
+    "examples/ch38/golden_slices.yaml": "50e30d5d884624e54f289c0405907f4381a1a0489c0aebc3b0129ea44a59fb0b",
+    "examples/ch38/trace_assertions.yaml": "c2b506bc9cb719994b05b441b9b9ea321f901ea502438ea681b4e5dcf37a1723",
+    "examples/ch38/fault_injection_matrix.yaml": "dfd33fefbae94289e13524dff0ba384f3d78a8cc3498bb4672705c5f24502917",
+    "examples/ch38/regression_runner/run.py": "4897bc24f3e38ae557d5fcb65ceb4617ba3e096d7c8210895deb6e81079e00fe",
     "examples/ch36/src/book_reference/__init__.py": "ec24443107accb695c3cc9d5775574fddc551b365fc16877b8195888e070c6b2",
     "examples/ch36/src/book_reference/adapters.py": "0ce8621f48212d73e4e0e4dbf56351dced87903b331de4f6b2bf8cc18f63f7be",
     "examples/ch36/src/book_reference/cli.py": "a2fdea094fe6c09c649cdae0db68ba4105e6905d10103d20cbb88e831acb0656",
@@ -52,6 +53,7 @@
       ],
       "tickets": [],
       "creates": 0,
+      "replays": 0,
       "trace": [
         {
           "sequence": 1,
@@ -102,6 +104,7 @@
         "trace_order"
       ],
       "errors": [
+        "tool_sequence",
         "status",
         "effect_count",
         "trace_order"
@@ -125,6 +128,7 @@
       "calls": [],
       "tickets": [],
       "creates": 0,
+      "replays": 0,
       "trace": [
         {
           "sequence": 1,
@@ -175,6 +179,7 @@
       ],
       "tickets": [],
       "creates": 0,
+      "replays": 0,
       "trace": [
         {
           "sequence": 1,
@@ -223,6 +228,7 @@
       ],
       "initial_trace_errors": [],
       "errors": [
+        "tool_sequence",
         "reason"
       ],
       "passed": false
@@ -248,6 +254,7 @@
       ],
       "tickets": [],
       "creates": 0,
+      "replays": 0,
       "trace": [
         {
           "sequence": 1,
@@ -307,6 +314,7 @@
         "trace_order"
       ],
       "errors": [
+        "tool_sequence",
         "status",
         "effect_count",
         "trace_order"
@@ -332,6 +340,7 @@
       ],
       "tickets": [],
       "creates": 0,
+      "replays": 0,
       "trace": [
         {
           "sequence": 1,
@@ -383,6 +392,7 @@
         "fault_evidence"
       ],
       "errors": [
+        "tool_sequence",
         "status",
         "effect_count",
         "trace_order",
@@ -409,6 +419,7 @@
       ],
       "tickets": [],
       "creates": 0,
+      "replays": 0,
       "trace": [
         {
           "sequence": 1,
@@ -460,6 +471,7 @@
         "fault_evidence"
       ],
       "errors": [
+        "tool_sequence",
         "status",
         "effect_count",
         "trace_order",
@@ -486,6 +498,7 @@
       ],
       "tickets": [],
       "creates": 0,
+      "replays": 0,
       "trace": [
         {
           "sequence": 1,
@@ -537,6 +550,7 @@
         "fault_evidence"
       ],
       "errors": [
+        "tool_sequence",
         "status",
         "effect_count",
         "trace_order",
@@ -563,6 +577,7 @@
       ],
       "tickets": [],
       "creates": 0,
+      "replays": 0,
       "trace": [
         {
           "sequence": 1,
@@ -614,6 +629,7 @@
         "fault_evidence"
       ],
       "errors": [
+        "tool_sequence",
         "status",
         "effect_count",
         "trace_order",
@@ -640,6 +656,7 @@
       ],
       "tickets": [],
       "creates": 0,
+      "replays": 0,
       "trace": [
         {
           "sequence": 1,
@@ -690,6 +707,7 @@
         "fault_evidence"
       ],
       "errors": [
+        "tool_sequence",
         "reason",
         "fault_evidence"
       ],
@@ -712,6 +730,7 @@
       "calls": [],
       "tickets": [],
       "creates": 0,
+      "replays": 0,
       "trace": [
         {
           "sequence": 1,
@@ -762,6 +781,7 @@
       ],
       "tickets": [],
       "creates": 0,
+      "replays": 0,
       "trace": [
         {
           "sequence": 1,
@@ -813,6 +833,7 @@
         "fault_evidence"
       ],
       "errors": [
+        "tool_sequence",
         "status",
         "effect_count",
         "trace_order",
@@ -839,6 +860,7 @@
       ],
       "tickets": [],
       "creates": 0,
+      "replays": 0,
       "trace": [
         {
           "sequence": 1,
@@ -890,6 +912,7 @@
         "fault_evidence"
       ],
       "errors": [
+        "tool_sequence",
         "status",
         "effect_count",
         "trace_order",

@@ -3,72 +3,129 @@
     "id": "ordinary",
     "status": "completed",
     "count": 1,
-    "reason": null
+    "reason": null,
+    "calls": [
+      "lookup",
+      "create",
+      "verify"
+    ]
   },
   {
     "id": "supervisor",
     "status": "rejected",
     "count": 0,
-    "reason": "needs_approval"
+    "reason": "needs_approval",
+    "calls": []
   },
   {
     "id": "no_grant",
     "status": "rejected",
     "count": 0,
-    "reason": "approval_missing"
+    "reason": "approval_missing",
+    "calls": [
+      "lookup",
+      "create"
+    ]
   },
   {
     "id": "lookup_timeout",
     "status": "completed",
     "count": 1,
-    "reason": null
+    "reason": null,
+    "calls": [
+      "lookup",
+      "lookup",
+      "create",
+      "verify"
+    ]
   },
   {
     "id": "response_lost",
     "status": "completed",
     "count": 1,
-    "reason": null
+    "reason": null,
+    "calls": [
+      "lookup",
+      "create",
+      "lookup",
+      "verify"
+    ]
   },
   {
     "id": "after_commit",
     "status": "completed",
     "count": 1,
-    "reason": null
+    "reason": null,
+    "calls": [
+      "lookup",
+      "create",
+      "lookup",
+      "verify"
+    ]
   },
   {
     "id": "rate_limited",
     "status": "completed",
     "count": 1,
-    "reason": null
+    "reason": null,
+    "calls": [
+      "lookup",
+      "create",
+      "lookup",
+      "create",
+      "verify"
+    ]
   },
   {
     "id": "wrong_result",
     "status": "completed",
     "count": 1,
-    "reason": null
+    "reason": null,
+    "calls": [
+      "lookup",
+      "create",
+      "verify",
+      "lookup",
+      "verify"
+    ]
   },
   {
     "id": "expired_grant",
     "status": "rejected",
     "count": 0,
-    "reason": "approval_expired"
+    "reason": "approval_expired",
+    "calls": [
+      "lookup",
+      "create"
+    ]
   },
   {
     "id": "wrong_policy",
     "status": "rejected",
     "count": 0,
-    "reason": "policy_version"
+    "reason": "policy_version",
+    "calls": []
   },
   {
     "id": "cancel_after_commit",
     "status": "cancelled",
     "count": 1,
-    "reason": null
+    "reason": null,
+    "calls": [
+      "lookup",
+      "create",
+      "lookup"
+    ]
   },
   {
     "id": "trace_export_loss",
     "status": "completed",
     "count": 1,
-    "reason": null
+    "reason": null,
+    "calls": [
+      "lookup",
+      "create",
+      "verify"
+    ]
   }
 ]
