@@ -1,0 +1,16 @@
+{
+  "tasks_per_tenant": 25,
+  "tenants": [
+    "batch",
+    "interactive"
+  ],
+  "fast_ms": 3,
+  "slow_ms": 12,
+  "slow_every": 3,
+  "endpoint_slots": 5,
+  "workers": 4,
+  "tenant_limit": 2,
+  "ready_per_tenant": 3,
+  "timeout_ms": 1000,
+  "repetitions": 5
+}
