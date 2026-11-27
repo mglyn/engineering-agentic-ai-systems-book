@@ -1,0 +1,74 @@
+[
+  {
+    "id": "ordinary",
+    "status": "completed",
+    "count": 1,
+    "reason": null
+  },
+  {
+    "id": "supervisor",
+    "status": "rejected",
+    "count": 0,
+    "reason": "needs_approval"
+  },
+  {
+    "id": "no_grant",
+    "status": "rejected",
+    "count": 0,
+    "reason": "approval_missing"
+  },
+  {
+    "id": "lookup_timeout",
+    "status": "completed",
+    "count": 1,
+    "reason": null
+  },
+  {
+    "id": "response_lost",
+    "status": "completed",
+    "count": 1,
+    "reason": null
+  },
+  {
+    "id": "after_commit",
+    "status": "completed",
+    "count": 1,
+    "reason": null
+  },
+  {
+    "id": "rate_limited",
+    "status": "completed",
+    "count": 1,
+    "reason": null
+  },
+  {
+    "id": "wrong_result",
+    "status": "completed",
+    "count": 1,
+    "reason": null
+  },
+  {
+    "id": "expired_grant",
+    "status": "rejected",
+    "count": 0,
+    "reason": "approval_expired"
+  },
+  {
+    "id": "wrong_policy",
+    "status": "rejected",
+    "count": 0,
+    "reason": "policy_version"
+  },
+  {
+    "id": "cancel_after_commit",
+    "status": "cancelled",
+    "count": 1,
+    "reason": null
+  },
+  {
+    "id": "trace_export_loss",
+    "status": "completed",
+    "count": 1,
+    "reason": null
+  }
+]
