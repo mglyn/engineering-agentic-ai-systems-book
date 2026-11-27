@@ -1,0 +1,22 @@
+{
+  "empty": {
+    "opened": "created"
+  },
+  "created": {
+    "started": "running"
+  },
+  "running": {
+    "paused": "paused",
+    "completed": "completed",
+    "cancelled": "cancelled",
+    "failed": "failed"
+  },
+  "paused": {
+    "resumed": "running",
+    "cancelled": "cancelled",
+    "failed": "failed"
+  },
+  "completed": {},
+  "cancelled": {},
+  "failed": {}
+}

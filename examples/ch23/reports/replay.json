@@ -1,0 +1,4236 @@
+{
+  "sessions": {
+    "completed": [
+      {
+        "session_id": "completed",
+        "turn_id": "turn-1",
+        "sequence": 1,
+        "event_id": "completed-1",
+        "occurred_ms": 1001,
+        "schema_version": 1,
+        "kind": "opened",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      {
+        "session_id": "completed",
+        "turn_id": "turn-1",
+        "sequence": 2,
+        "event_id": "completed-2",
+        "occurred_ms": 1002,
+        "schema_version": 1,
+        "kind": "started",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      {
+        "session_id": "completed",
+        "turn_id": "turn-1",
+        "sequence": 3,
+        "event_id": "completed-3",
+        "occurred_ms": 1003,
+        "schema_version": 1,
+        "kind": "paused",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      {
+        "session_id": "completed",
+        "turn_id": "turn-1",
+        "sequence": 4,
+        "event_id": "completed-4",
+        "occurred_ms": 1004,
+        "schema_version": 1,
+        "kind": "resumed",
+        "operation_id": "T-DEMO-01-completed:1:create",
+        "ticket_id": null
+      },
+      {
+        "session_id": "completed",
+        "turn_id": "turn-1",
+        "sequence": 5,
+        "event_id": "completed-5",
+        "occurred_ms": 1005,
+        "schema_version": 1,
+        "kind": "completed",
+        "operation_id": "T-DEMO-01-completed:1:create",
+        "ticket_id": 1
+      }
+    ],
+    "cancelled": [
+      {
+        "session_id": "cancelled",
+        "turn_id": "turn-1",
+        "sequence": 1,
+        "event_id": "cancelled-1",
+        "occurred_ms": 1001,
+        "schema_version": 1,
+        "kind": "opened",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      {
+        "session_id": "cancelled",
+        "turn_id": "turn-1",
+        "sequence": 2,
+        "event_id": "cancelled-2",
+        "occurred_ms": 1002,
+        "schema_version": 1,
+        "kind": "started",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      {
+        "session_id": "cancelled",
+        "turn_id": "turn-1",
+        "sequence": 3,
+        "event_id": "cancelled-3",
+        "occurred_ms": 1003,
+        "schema_version": 1,
+        "kind": "paused",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      {
+        "session_id": "cancelled",
+        "turn_id": "turn-1",
+        "sequence": 4,
+        "event_id": "cancelled-4",
+        "occurred_ms": 1004,
+        "schema_version": 1,
+        "kind": "resumed",
+        "operation_id": "T-DEMO-01-cancelled:1:create",
+        "ticket_id": null
+      },
+      {
+        "session_id": "cancelled",
+        "turn_id": "turn-1",
+        "sequence": 5,
+        "event_id": "cancelled-5",
+        "occurred_ms": 1005,
+        "schema_version": 1,
+        "kind": "cancelled",
+        "operation_id": "T-DEMO-01-cancelled:1:create",
+        "ticket_id": null
+      }
+    ],
+    "failed": [
+      {
+        "session_id": "failed",
+        "turn_id": "turn-1",
+        "sequence": 1,
+        "event_id": "failed-1",
+        "occurred_ms": 1001,
+        "schema_version": 1,
+        "kind": "opened",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      {
+        "session_id": "failed",
+        "turn_id": "turn-1",
+        "sequence": 2,
+        "event_id": "failed-2",
+        "occurred_ms": 1002,
+        "schema_version": 1,
+        "kind": "started",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      {
+        "session_id": "failed",
+        "turn_id": "turn-1",
+        "sequence": 3,
+        "event_id": "failed-3",
+        "occurred_ms": 1003,
+        "schema_version": 1,
+        "kind": "paused",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      {
+        "session_id": "failed",
+        "turn_id": "turn-1",
+        "sequence": 4,
+        "event_id": "failed-4",
+        "occurred_ms": 1004,
+        "schema_version": 1,
+        "kind": "resumed",
+        "operation_id": "T-DEMO-01-failed:1:create",
+        "ticket_id": null
+      },
+      {
+        "session_id": "failed",
+        "turn_id": "turn-1",
+        "sequence": 5,
+        "event_id": "failed-5",
+        "occurred_ms": 1005,
+        "schema_version": 1,
+        "kind": "failed",
+        "operation_id": "T-DEMO-01-failed:1:create",
+        "ticket_id": null
+      }
+    ]
+  },
+  "cases": [
+    {
+      "variant": "clean",
+      "received": [
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "completed-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "completed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "completed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "completed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": 1
+        }
+      ],
+      "snapshot": {
+        "session_id": "completed",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "completed",
+        "sequence": 5,
+        "status": "completed",
+        "operation_id": "T-DEMO-01-completed:1:create",
+        "ticket_id": 1
+      },
+      "elapsed_us": 468.8,
+      "actions": [],
+      "profile": "completed",
+      "before": [
+        1,
+        1
+      ],
+      "after": [
+        1,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "variant": "duplicate_first",
+      "received": [
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "completed-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "completed-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "completed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "completed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "completed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": 1
+        }
+      ],
+      "snapshot": {
+        "session_id": "completed",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "completed",
+        "sequence": 5,
+        "status": "completed",
+        "operation_id": "T-DEMO-01-completed:1:create",
+        "ticket_id": 1
+      },
+      "elapsed_us": 304.4,
+      "actions": [
+        "duplicate"
+      ],
+      "profile": "completed",
+      "before": [
+        1,
+        1
+      ],
+      "after": [
+        1,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "variant": "duplicate_middle",
+      "received": [
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "completed-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "completed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "completed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "completed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "completed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": 1
+        }
+      ],
+      "snapshot": {
+        "session_id": "completed",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "completed",
+        "sequence": 5,
+        "status": "completed",
+        "operation_id": "T-DEMO-01-completed:1:create",
+        "ticket_id": 1
+      },
+      "elapsed_us": 322.8,
+      "actions": [
+        "duplicate"
+      ],
+      "profile": "completed",
+      "before": [
+        1,
+        1
+      ],
+      "after": [
+        1,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "variant": "duplicate_end",
+      "received": [
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "completed-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "completed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "completed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "completed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": 1
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "completed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "completed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": 1
+        }
+      ],
+      "snapshot": {
+        "session_id": "completed",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "completed",
+        "sequence": 5,
+        "status": "completed",
+        "operation_id": "T-DEMO-01-completed:1:create",
+        "ticket_id": 1
+      },
+      "elapsed_us": 296.7,
+      "actions": [
+        "duplicate"
+      ],
+      "profile": "completed",
+      "before": [
+        1,
+        1
+      ],
+      "after": [
+        1,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "variant": "missing_first",
+      "received": [
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "completed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "completed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "completed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": 1
+        }
+      ],
+      "snapshot": {
+        "session_id": "completed",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "completed",
+        "sequence": 5,
+        "status": "completed",
+        "operation_id": "T-DEMO-01-completed:1:create",
+        "ticket_id": 1
+      },
+      "elapsed_us": 207.3,
+      "actions": [
+        "gap",
+        "gap",
+        "backfill",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "completed",
+      "before": [
+        1,
+        1
+      ],
+      "after": [
+        1,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "variant": "missing_middle",
+      "received": [
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "completed-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "completed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "completed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": 1
+        }
+      ],
+      "snapshot": {
+        "session_id": "completed",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "completed",
+        "sequence": 5,
+        "status": "completed",
+        "operation_id": "T-DEMO-01-completed:1:create",
+        "ticket_id": 1
+      },
+      "elapsed_us": 188.5,
+      "actions": [
+        "gap",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "completed",
+      "before": [
+        1,
+        1
+      ],
+      "after": [
+        1,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "variant": "missing_end",
+      "received": [
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "completed-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "completed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "completed",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "completed",
+        "sequence": 5,
+        "status": "completed",
+        "operation_id": "T-DEMO-01-completed:1:create",
+        "ticket_id": 1
+      },
+      "elapsed_us": 195.5,
+      "actions": [
+        "backfill"
+      ],
+      "profile": "completed",
+      "before": [
+        1,
+        1
+      ],
+      "after": [
+        1,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "variant": "reverse",
+      "received": [
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "completed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "completed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": 1
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "completed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "completed-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "completed",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "completed",
+        "sequence": 5,
+        "status": "completed",
+        "operation_id": "T-DEMO-01-completed:1:create",
+        "ticket_id": 1
+      },
+      "elapsed_us": 230.1,
+      "actions": [
+        "gap",
+        "gap",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "completed",
+      "before": [
+        1,
+        1
+      ],
+      "after": [
+        1,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "variant": "swap_first",
+      "received": [
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "completed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "completed-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "completed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "completed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": 1
+        }
+      ],
+      "snapshot": {
+        "session_id": "completed",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "completed",
+        "sequence": 5,
+        "status": "completed",
+        "operation_id": "T-DEMO-01-completed:1:create",
+        "ticket_id": 1
+      },
+      "elapsed_us": 228.0,
+      "actions": [
+        "gap",
+        "gap",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "completed",
+      "before": [
+        1,
+        1
+      ],
+      "after": [
+        1,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "variant": "swap_last",
+      "received": [
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "completed-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "completed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "completed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": 1
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "completed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "completed",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "completed",
+        "sequence": 5,
+        "status": "completed",
+        "operation_id": "T-DEMO-01-completed:1:create",
+        "ticket_id": 1
+      },
+      "elapsed_us": 225.0,
+      "actions": [
+        "gap",
+        "backfill"
+      ],
+      "profile": "completed",
+      "before": [
+        1,
+        1
+      ],
+      "after": [
+        1,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "variant": "empty_wire",
+      "received": [],
+      "snapshot": {
+        "session_id": "completed",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "completed",
+        "sequence": 5,
+        "status": "completed",
+        "operation_id": "T-DEMO-01-completed:1:create",
+        "ticket_id": 1
+      },
+      "elapsed_us": 103.5,
+      "actions": [
+        "backfill",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "completed",
+      "before": [
+        1,
+        1
+      ],
+      "after": [
+        1,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "variant": "old_snapshot",
+      "received": [
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "completed-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "completed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "completed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "completed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": 1
+        }
+      ],
+      "snapshot": {
+        "session_id": "completed",
+        "sequence": 1,
+        "status": "created",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "completed",
+        "sequence": 5,
+        "status": "completed",
+        "operation_id": "T-DEMO-01-completed:1:create",
+        "ticket_id": 1
+      },
+      "elapsed_us": 234.4,
+      "actions": [
+        "gap",
+        "gap",
+        "gap",
+        "backfill",
+        "backfill",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "completed",
+      "before": [
+        1,
+        1
+      ],
+      "after": [
+        1,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "variant": "ahead_snapshot",
+      "received": [
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "completed-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "completed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "completed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "completed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": 1
+        }
+      ],
+      "snapshot": {
+        "session_id": "completed",
+        "sequence": 99,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "completed",
+        "sequence": 5,
+        "status": "completed",
+        "operation_id": "T-DEMO-01-completed:1:create",
+        "ticket_id": 1
+      },
+      "elapsed_us": 250.1,
+      "actions": [
+        "reset_snapshot",
+        "gap",
+        "gap",
+        "gap",
+        "backfill",
+        "backfill",
+        "backfill",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "completed",
+      "before": [
+        1,
+        1
+      ],
+      "after": [
+        1,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "variant": "wrong_session_snapshot",
+      "received": [
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "completed-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "completed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "completed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "completed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": 1
+        }
+      ],
+      "snapshot": {
+        "session_id": "other",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "completed",
+        "sequence": 5,
+        "status": "completed",
+        "operation_id": "T-DEMO-01-completed:1:create",
+        "ticket_id": 1
+      },
+      "elapsed_us": 252.8,
+      "actions": [
+        "reset_snapshot",
+        "gap",
+        "gap",
+        "gap",
+        "backfill",
+        "backfill",
+        "backfill",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "completed",
+      "before": [
+        1,
+        1
+      ],
+      "after": [
+        1,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "variant": "bad_snapshot_digest",
+      "received": [
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "completed-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "completed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "completed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "completed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": 1
+        }
+      ],
+      "snapshot": {
+        "session_id": "completed",
+        "sequence": 2,
+        "status": "completed",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "completed",
+        "sequence": 5,
+        "status": "completed",
+        "operation_id": "T-DEMO-01-completed:1:create",
+        "ticket_id": 1
+      },
+      "elapsed_us": 889.2,
+      "actions": [
+        "reset_snapshot",
+        "gap",
+        "gap",
+        "gap",
+        "backfill",
+        "backfill",
+        "backfill",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "completed",
+      "before": [
+        1,
+        1
+      ],
+      "after": [
+        1,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "variant": "future_version",
+      "received": [
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "completed-3",
+          "occurred_ms": 1003,
+          "schema_version": 2,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "completed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "completed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "completed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": 1
+        }
+      ],
+      "snapshot": {
+        "session_id": "completed",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "completed",
+        "sequence": 5,
+        "status": "completed",
+        "operation_id": "T-DEMO-01-completed:1:create",
+        "ticket_id": 1
+      },
+      "elapsed_us": 343.3,
+      "actions": [
+        "reject_version_or_fields",
+        "gap",
+        "gap",
+        "backfill",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "completed",
+      "before": [
+        1,
+        1
+      ],
+      "after": [
+        1,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "variant": "legacy_version",
+      "received": [
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "event_id": "completed-3",
+          "occurred_ms": 1003,
+          "schema_version": 0,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null,
+          "seq": 3
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "completed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "completed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "completed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": 1
+        }
+      ],
+      "snapshot": {
+        "session_id": "completed",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "completed",
+        "sequence": 5,
+        "status": "completed",
+        "operation_id": "T-DEMO-01-completed:1:create",
+        "ticket_id": 1
+      },
+      "elapsed_us": 366.6,
+      "actions": [],
+      "profile": "completed",
+      "before": [
+        1,
+        1
+      ],
+      "after": [
+        1,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "variant": "foreign_event",
+      "received": [
+        {
+          "session_id": "other",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "completed-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "completed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "completed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "completed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": 1
+        }
+      ],
+      "snapshot": {
+        "session_id": "completed",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "completed",
+        "sequence": 5,
+        "status": "completed",
+        "operation_id": "T-DEMO-01-completed:1:create",
+        "ticket_id": 1
+      },
+      "elapsed_us": 298.4,
+      "actions": [
+        "reject_foreign",
+        "gap",
+        "gap",
+        "backfill",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "completed",
+      "before": [
+        1,
+        1
+      ],
+      "after": [
+        1,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "variant": "changed_payload",
+      "received": [
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "completed-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": 999
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "completed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "completed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "completed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": 1
+        }
+      ],
+      "snapshot": {
+        "session_id": "completed",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "completed",
+        "sequence": 5,
+        "status": "completed",
+        "operation_id": "T-DEMO-01-completed:1:create",
+        "ticket_id": 1
+      },
+      "elapsed_us": 356.1,
+      "actions": [
+        "reject_conflict",
+        "gap",
+        "gap",
+        "backfill",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "completed",
+      "before": [
+        1,
+        1
+      ],
+      "after": [
+        1,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "variant": "changed_id",
+      "received": [
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "reused",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "completed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "completed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "completed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "completed",
+          "operation_id": "T-DEMO-01-completed:1:create",
+          "ticket_id": 1
+        }
+      ],
+      "snapshot": {
+        "session_id": "completed",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "completed",
+        "sequence": 5,
+        "status": "completed",
+        "operation_id": "T-DEMO-01-completed:1:create",
+        "ticket_id": 1
+      },
+      "elapsed_us": 369.9,
+      "actions": [
+        "reject_conflict",
+        "gap",
+        "gap",
+        "backfill",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "completed",
+      "before": [
+        1,
+        1
+      ],
+      "after": [
+        1,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "variant": "clean",
+      "received": [
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "cancelled-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "cancelled-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "cancelled-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "cancelled",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "cancelled",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "cancelled",
+        "sequence": 5,
+        "status": "cancelled",
+        "operation_id": "T-DEMO-01-cancelled:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 393.2,
+      "actions": [],
+      "profile": "cancelled",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "duplicate_first",
+      "received": [
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "cancelled-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "cancelled-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "cancelled-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "cancelled-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "cancelled",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "cancelled",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "cancelled",
+        "sequence": 5,
+        "status": "cancelled",
+        "operation_id": "T-DEMO-01-cancelled:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 312.9,
+      "actions": [
+        "duplicate"
+      ],
+      "profile": "cancelled",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "duplicate_middle",
+      "received": [
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "cancelled-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "cancelled-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "cancelled-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "cancelled-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "cancelled",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "cancelled",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "cancelled",
+        "sequence": 5,
+        "status": "cancelled",
+        "operation_id": "T-DEMO-01-cancelled:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 316.5,
+      "actions": [
+        "duplicate"
+      ],
+      "profile": "cancelled",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "duplicate_end",
+      "received": [
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "cancelled-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "cancelled-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "cancelled-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "cancelled",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "cancelled-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "cancelled",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "cancelled",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "cancelled",
+        "sequence": 5,
+        "status": "cancelled",
+        "operation_id": "T-DEMO-01-cancelled:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 373.4,
+      "actions": [
+        "duplicate"
+      ],
+      "profile": "cancelled",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "missing_first",
+      "received": [
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "cancelled-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "cancelled-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "cancelled",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "cancelled",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "cancelled",
+        "sequence": 5,
+        "status": "cancelled",
+        "operation_id": "T-DEMO-01-cancelled:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 213.2,
+      "actions": [
+        "gap",
+        "gap",
+        "backfill",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "cancelled",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "missing_middle",
+      "received": [
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "cancelled-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "cancelled-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "cancelled",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "cancelled",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "cancelled",
+        "sequence": 5,
+        "status": "cancelled",
+        "operation_id": "T-DEMO-01-cancelled:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 206.1,
+      "actions": [
+        "gap",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "cancelled",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "missing_end",
+      "received": [
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "cancelled-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "cancelled-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "cancelled",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "cancelled",
+        "sequence": 5,
+        "status": "cancelled",
+        "operation_id": "T-DEMO-01-cancelled:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 194.9,
+      "actions": [
+        "backfill"
+      ],
+      "profile": "cancelled",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "reverse",
+      "received": [
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "cancelled-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "cancelled",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "cancelled-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "cancelled-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "cancelled",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "cancelled",
+        "sequence": 5,
+        "status": "cancelled",
+        "operation_id": "T-DEMO-01-cancelled:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 593.1,
+      "actions": [
+        "gap",
+        "gap",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "cancelled",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "swap_first",
+      "received": [
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "cancelled-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "cancelled-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "cancelled-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "cancelled",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "cancelled",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "cancelled",
+        "sequence": 5,
+        "status": "cancelled",
+        "operation_id": "T-DEMO-01-cancelled:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 275.3,
+      "actions": [
+        "gap",
+        "gap",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "cancelled",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "swap_last",
+      "received": [
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "cancelled-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "cancelled-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "cancelled",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "cancelled-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "cancelled",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "cancelled",
+        "sequence": 5,
+        "status": "cancelled",
+        "operation_id": "T-DEMO-01-cancelled:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 284.7,
+      "actions": [
+        "gap",
+        "backfill"
+      ],
+      "profile": "cancelled",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "empty_wire",
+      "received": [],
+      "snapshot": {
+        "session_id": "cancelled",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "cancelled",
+        "sequence": 5,
+        "status": "cancelled",
+        "operation_id": "T-DEMO-01-cancelled:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 370.9,
+      "actions": [
+        "backfill",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "cancelled",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "old_snapshot",
+      "received": [
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "cancelled-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "cancelled-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "cancelled-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "cancelled",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "cancelled",
+        "sequence": 1,
+        "status": "created",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "cancelled",
+        "sequence": 5,
+        "status": "cancelled",
+        "operation_id": "T-DEMO-01-cancelled:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 379.9,
+      "actions": [
+        "gap",
+        "gap",
+        "gap",
+        "backfill",
+        "backfill",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "cancelled",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "ahead_snapshot",
+      "received": [
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "cancelled-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "cancelled-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "cancelled-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "cancelled",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "cancelled",
+        "sequence": 99,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "cancelled",
+        "sequence": 5,
+        "status": "cancelled",
+        "operation_id": "T-DEMO-01-cancelled:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 329.1,
+      "actions": [
+        "reset_snapshot",
+        "gap",
+        "gap",
+        "gap",
+        "backfill",
+        "backfill",
+        "backfill",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "cancelled",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "wrong_session_snapshot",
+      "received": [
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "cancelled-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "cancelled-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "cancelled-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "cancelled",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "other",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "cancelled",
+        "sequence": 5,
+        "status": "cancelled",
+        "operation_id": "T-DEMO-01-cancelled:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 353.2,
+      "actions": [
+        "reset_snapshot",
+        "gap",
+        "gap",
+        "gap",
+        "backfill",
+        "backfill",
+        "backfill",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "cancelled",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "bad_snapshot_digest",
+      "received": [
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "cancelled-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "cancelled-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "cancelled-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "cancelled",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "cancelled",
+        "sequence": 2,
+        "status": "completed",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "cancelled",
+        "sequence": 5,
+        "status": "cancelled",
+        "operation_id": "T-DEMO-01-cancelled:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 272.4,
+      "actions": [
+        "reset_snapshot",
+        "gap",
+        "gap",
+        "gap",
+        "backfill",
+        "backfill",
+        "backfill",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "cancelled",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "future_version",
+      "received": [
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "cancelled-3",
+          "occurred_ms": 1003,
+          "schema_version": 2,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "cancelled-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "cancelled-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "cancelled",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "cancelled",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "cancelled",
+        "sequence": 5,
+        "status": "cancelled",
+        "operation_id": "T-DEMO-01-cancelled:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 209.0,
+      "actions": [
+        "reject_version_or_fields",
+        "gap",
+        "gap",
+        "backfill",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "cancelled",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "legacy_version",
+      "received": [
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "event_id": "cancelled-3",
+          "occurred_ms": 1003,
+          "schema_version": 0,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null,
+          "seq": 3
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "cancelled-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "cancelled-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "cancelled",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "cancelled",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "cancelled",
+        "sequence": 5,
+        "status": "cancelled",
+        "operation_id": "T-DEMO-01-cancelled:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 238.5,
+      "actions": [],
+      "profile": "cancelled",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "foreign_event",
+      "received": [
+        {
+          "session_id": "other",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "cancelled-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "cancelled-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "cancelled-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "cancelled",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "cancelled",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "cancelled",
+        "sequence": 5,
+        "status": "cancelled",
+        "operation_id": "T-DEMO-01-cancelled:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 218.4,
+      "actions": [
+        "reject_foreign",
+        "gap",
+        "gap",
+        "backfill",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "cancelled",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "changed_payload",
+      "received": [
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "cancelled-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": 999
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "cancelled-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "cancelled-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "cancelled",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "cancelled",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "cancelled",
+        "sequence": 5,
+        "status": "cancelled",
+        "operation_id": "T-DEMO-01-cancelled:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 235.9,
+      "actions": [
+        "reject_conflict",
+        "gap",
+        "gap",
+        "backfill",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "cancelled",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "changed_id",
+      "received": [
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "reused",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "cancelled-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "cancelled",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "cancelled-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "cancelled",
+          "operation_id": "T-DEMO-01-cancelled:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "cancelled",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "cancelled",
+        "sequence": 5,
+        "status": "cancelled",
+        "operation_id": "T-DEMO-01-cancelled:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 253.0,
+      "actions": [
+        "reject_conflict",
+        "gap",
+        "gap",
+        "backfill",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "cancelled",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "clean",
+      "received": [
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "failed-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "failed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "failed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "failed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "failed",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "failed",
+        "sequence": 5,
+        "status": "failed",
+        "operation_id": "T-DEMO-01-failed:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 445.0,
+      "actions": [],
+      "profile": "failed",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "duplicate_first",
+      "received": [
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "failed-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "failed-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "failed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "failed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "failed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "failed",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "failed",
+        "sequence": 5,
+        "status": "failed",
+        "operation_id": "T-DEMO-01-failed:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 319.0,
+      "actions": [
+        "duplicate"
+      ],
+      "profile": "failed",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "duplicate_middle",
+      "received": [
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "failed-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "failed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "failed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "failed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "failed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "failed",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "failed",
+        "sequence": 5,
+        "status": "failed",
+        "operation_id": "T-DEMO-01-failed:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 308.1,
+      "actions": [
+        "duplicate"
+      ],
+      "profile": "failed",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "duplicate_end",
+      "received": [
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "failed-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "failed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "failed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "failed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "failed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "failed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "failed",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "failed",
+        "sequence": 5,
+        "status": "failed",
+        "operation_id": "T-DEMO-01-failed:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 267.2,
+      "actions": [
+        "duplicate"
+      ],
+      "profile": "failed",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "missing_first",
+      "received": [
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "failed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "failed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "failed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "failed",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "failed",
+        "sequence": 5,
+        "status": "failed",
+        "operation_id": "T-DEMO-01-failed:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 216.0,
+      "actions": [
+        "gap",
+        "gap",
+        "backfill",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "failed",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "missing_middle",
+      "received": [
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "failed-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "failed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "failed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "failed",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "failed",
+        "sequence": 5,
+        "status": "failed",
+        "operation_id": "T-DEMO-01-failed:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 194.2,
+      "actions": [
+        "gap",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "failed",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "missing_end",
+      "received": [
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "failed-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "failed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "failed",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "failed",
+        "sequence": 5,
+        "status": "failed",
+        "operation_id": "T-DEMO-01-failed:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 187.7,
+      "actions": [
+        "backfill"
+      ],
+      "profile": "failed",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "reverse",
+      "received": [
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "failed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "failed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "failed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "failed-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "failed",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "failed",
+        "sequence": 5,
+        "status": "failed",
+        "operation_id": "T-DEMO-01-failed:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 230.4,
+      "actions": [
+        "gap",
+        "gap",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "failed",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "swap_first",
+      "received": [
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "failed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "failed-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "failed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "failed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "failed",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "failed",
+        "sequence": 5,
+        "status": "failed",
+        "operation_id": "T-DEMO-01-failed:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 239.3,
+      "actions": [
+        "gap",
+        "gap",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "failed",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "swap_last",
+      "received": [
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "failed-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "failed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "failed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "failed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "failed",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "failed",
+        "sequence": 5,
+        "status": "failed",
+        "operation_id": "T-DEMO-01-failed:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 229.6,
+      "actions": [
+        "gap",
+        "backfill"
+      ],
+      "profile": "failed",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "empty_wire",
+      "received": [],
+      "snapshot": {
+        "session_id": "failed",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "failed",
+        "sequence": 5,
+        "status": "failed",
+        "operation_id": "T-DEMO-01-failed:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 104.9,
+      "actions": [
+        "backfill",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "failed",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "old_snapshot",
+      "received": [
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "failed-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "failed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "failed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "failed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "failed",
+        "sequence": 1,
+        "status": "created",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "failed",
+        "sequence": 5,
+        "status": "failed",
+        "operation_id": "T-DEMO-01-failed:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 240.3,
+      "actions": [
+        "gap",
+        "gap",
+        "gap",
+        "backfill",
+        "backfill",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "failed",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "ahead_snapshot",
+      "received": [
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "failed-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "failed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "failed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "failed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "failed",
+        "sequence": 99,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "failed",
+        "sequence": 5,
+        "status": "failed",
+        "operation_id": "T-DEMO-01-failed:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 251.2,
+      "actions": [
+        "reset_snapshot",
+        "gap",
+        "gap",
+        "gap",
+        "backfill",
+        "backfill",
+        "backfill",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "failed",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "wrong_session_snapshot",
+      "received": [
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "failed-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "failed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "failed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "failed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "other",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "failed",
+        "sequence": 5,
+        "status": "failed",
+        "operation_id": "T-DEMO-01-failed:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 264.1,
+      "actions": [
+        "reset_snapshot",
+        "gap",
+        "gap",
+        "gap",
+        "backfill",
+        "backfill",
+        "backfill",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "failed",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "bad_snapshot_digest",
+      "received": [
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "failed-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "failed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "failed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "failed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "failed",
+        "sequence": 2,
+        "status": "completed",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "failed",
+        "sequence": 5,
+        "status": "failed",
+        "operation_id": "T-DEMO-01-failed:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 252.5,
+      "actions": [
+        "reset_snapshot",
+        "gap",
+        "gap",
+        "gap",
+        "backfill",
+        "backfill",
+        "backfill",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "failed",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "future_version",
+      "received": [
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "failed-3",
+          "occurred_ms": 1003,
+          "schema_version": 2,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "failed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "failed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "failed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "failed",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "failed",
+        "sequence": 5,
+        "status": "failed",
+        "operation_id": "T-DEMO-01-failed:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 209.9,
+      "actions": [
+        "reject_version_or_fields",
+        "gap",
+        "gap",
+        "backfill",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "failed",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "legacy_version",
+      "received": [
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "event_id": "failed-3",
+          "occurred_ms": 1003,
+          "schema_version": 0,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null,
+          "seq": 3
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "failed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "failed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "failed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "failed",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "failed",
+        "sequence": 5,
+        "status": "failed",
+        "operation_id": "T-DEMO-01-failed:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 238.7,
+      "actions": [],
+      "profile": "failed",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "foreign_event",
+      "received": [
+        {
+          "session_id": "other",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "failed-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "failed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "failed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "failed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "failed",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "failed",
+        "sequence": 5,
+        "status": "failed",
+        "operation_id": "T-DEMO-01-failed:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 200.7,
+      "actions": [
+        "reject_foreign",
+        "gap",
+        "gap",
+        "backfill",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "failed",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "changed_payload",
+      "received": [
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "failed-3",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": 999
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "failed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "failed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "failed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "failed",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "failed",
+        "sequence": 5,
+        "status": "failed",
+        "operation_id": "T-DEMO-01-failed:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 240.4,
+      "actions": [
+        "reject_conflict",
+        "gap",
+        "gap",
+        "backfill",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "failed",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "variant": "changed_id",
+      "received": [
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 3,
+          "event_id": "reused",
+          "occurred_ms": 1003,
+          "schema_version": 1,
+          "kind": "paused",
+          "operation_id": null,
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 4,
+          "event_id": "failed-4",
+          "occurred_ms": 1004,
+          "schema_version": 1,
+          "kind": "resumed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        },
+        {
+          "session_id": "failed",
+          "turn_id": "turn-1",
+          "sequence": 5,
+          "event_id": "failed-5",
+          "occurred_ms": 1005,
+          "schema_version": 1,
+          "kind": "failed",
+          "operation_id": "T-DEMO-01-failed:1:create",
+          "ticket_id": null
+        }
+      ],
+      "snapshot": {
+        "session_id": "failed",
+        "sequence": 2,
+        "status": "running",
+        "operation_id": null,
+        "ticket_id": null
+      },
+      "result": {
+        "session_id": "failed",
+        "sequence": 5,
+        "status": "failed",
+        "operation_id": "T-DEMO-01-failed:1:create",
+        "ticket_id": null
+      },
+      "elapsed_us": 705.7,
+      "actions": [
+        "reject_conflict",
+        "gap",
+        "gap",
+        "backfill",
+        "backfill",
+        "backfill"
+      ],
+      "profile": "failed",
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "passed": true
+    }
+  ],
+  "same_key_retry": {
+    "ticket_id": 1,
+    "counts": [
+      1,
+      2
+    ]
+  },
+  "transcript_only": {
+    "chat": "请求已收到",
+    "before": [
+      1,
+      2
+    ],
+    "after": [
+      2,
+      3
+    ]
+  }
+}
