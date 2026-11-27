@@ -1,0 +1,18 @@
+{
+  "scope": "local stdio processes; fixed model; course fixtures",
+  "artifacts": {
+    "r1": "5640a57f3e177b9979deb190309210c5cf45c21b799fa50ff8ccdd6f6afb2f55",
+    "r2": "7d3ea6516d73e86ad5992ae8c5db0e05b0ed88ce02a024be3759d0ccf9556576"
+  },
+  "tests": "absent",
+  "gates": {
+    "projects": true,
+    "tests": false,
+    "regression": true,
+    "log_marker_absent": true
+  },
+  "human_review": "pending",
+  "timeline": [],
+  "production_authorized": false,
+  "result": "hold"
+}

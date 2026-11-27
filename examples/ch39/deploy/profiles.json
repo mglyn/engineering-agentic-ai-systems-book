@@ -1,0 +1,41 @@
+{
+  "local": {
+    "transport": "stdio",
+    "policy": "P20-A@2.0",
+    "viewer": [
+      "read"
+    ],
+    "data": "one editable synthetic task",
+    "identity": "author",
+    "artifact": "source tree",
+    "network": "no external endpoint",
+    "credentials": "none",
+    "evidence": "console"
+  },
+  "test": {
+    "transport": "stdio",
+    "policy": "P20-A@2.0",
+    "viewer": [
+      "read"
+    ],
+    "data": "fresh fixture per test",
+    "identity": "test runner",
+    "artifact": "checked-out source",
+    "network": "no external endpoint",
+    "credentials": "none",
+    "evidence": "pytest plus gate JSON"
+  },
+  "preprod": {
+    "transport": "stdio",
+    "policy": "P20-A@2.0",
+    "viewer": [
+      "read"
+    ],
+    "data": "persistent PRJ-3 fixture throughout rollback",
+    "identity": "release observer",
+    "artifact": "versioned pyz",
+    "network": "no external endpoint",
+    "credentials": "none",
+    "evidence": "five-stage release.json"
+  }
+}

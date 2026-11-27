@@ -1,0 +1,203 @@
+{
+  "scope": "local stdio processes; fixed model; course fixtures",
+  "artifacts": {
+    "r1": "5640a57f3e177b9979deb190309210c5cf45c21b799fa50ff8ccdd6f6afb2f55",
+    "r2": "7d3ea6516d73e86ad5992ae8c5db0e05b0ed88ce02a024be3759d0ccf9556576"
+  },
+  "tests": "..............................................................           [100%]",
+  "gates": {
+    "projects": true,
+    "tests": true,
+    "regression": true,
+    "log_marker_absent": true
+  },
+  "human_review": "pending",
+  "timeline": [
+    {
+      "stage": "before",
+      "process_healthy": true,
+      "facts": {
+        "code": true,
+        "config": true,
+        "data": true,
+        "identity": true,
+        "cache": true
+      },
+      "accepted": true,
+      "observed": {
+        "revision": "r1",
+        "healthy": true,
+        "config": {
+          "policy": "P20-A@2.0",
+          "transport": "stdio"
+        },
+        "authority": [
+          "read"
+        ],
+        "effective": [
+          "read"
+        ],
+        "tickets": [
+          [
+            "course",
+            "T-DEMO-01:1:create",
+            "{\"amount\":250,\"domestic\":true,\"policy_version\":\"P20-A@2.0\",\"receipt_valid\":true,\"revision\":1,\"task_id\":\"T-DEMO-01\"}",
+            "935f89fc7b70c30a9b85650cb427b85b039c158de50a9620691cc0e9889a1a87"
+          ]
+        ],
+        "created": 1
+      }
+    },
+    {
+      "stage": "controlled-release",
+      "process_healthy": true,
+      "facts": {
+        "code": true,
+        "config": true,
+        "data": true,
+        "identity": true,
+        "cache": true
+      },
+      "accepted": true,
+      "observed": {
+        "revision": "r2",
+        "healthy": true,
+        "config": {
+          "policy": "P20-A@2.0",
+          "transport": "stdio"
+        },
+        "authority": [
+          "read"
+        ],
+        "effective": [
+          "read"
+        ],
+        "tickets": [
+          [
+            "course",
+            "T-DEMO-01:1:create",
+            "{\"amount\":250,\"domestic\":true,\"policy_version\":\"P20-A@2.0\",\"receipt_valid\":true,\"revision\":1,\"task_id\":\"T-DEMO-01\"}",
+            "935f89fc7b70c30a9b85650cb427b85b039c158de50a9620691cc0e9889a1a87"
+          ]
+        ],
+        "created": 1
+      }
+    },
+    {
+      "stage": "config-drift",
+      "process_healthy": true,
+      "facts": {
+        "code": true,
+        "config": false,
+        "data": true,
+        "identity": false,
+        "cache": false
+      },
+      "accepted": false,
+      "observed": {
+        "revision": "r2",
+        "healthy": true,
+        "config": {
+          "policy": "P20-A@1.0",
+          "transport": "stdio"
+        },
+        "authority": [
+          "read",
+          "approve"
+        ],
+        "effective": [
+          "read",
+          "approve"
+        ],
+        "tickets": [
+          [
+            "course",
+            "T-DEMO-01:1:create",
+            "{\"amount\":250,\"domestic\":true,\"policy_version\":\"P20-A@2.0\",\"receipt_valid\":true,\"revision\":1,\"task_id\":\"T-DEMO-01\"}",
+            "935f89fc7b70c30a9b85650cb427b85b039c158de50a9620691cc0e9889a1a87"
+          ]
+        ],
+        "created": 1
+      }
+    },
+    {
+      "stage": "partial-rollback",
+      "process_healthy": true,
+      "facts": {
+        "code": true,
+        "config": true,
+        "data": true,
+        "identity": true,
+        "cache": false
+      },
+      "accepted": false,
+      "observed": {
+        "revision": "r1",
+        "healthy": true,
+        "config": {
+          "policy": "P20-A@2.0",
+          "transport": "stdio"
+        },
+        "authority": [
+          "read"
+        ],
+        "effective": [
+          "read",
+          "approve"
+        ],
+        "tickets": [
+          [
+            "course",
+            "T-DEMO-01:1:create",
+            "{\"amount\":250,\"domestic\":true,\"policy_version\":\"P20-A@2.0\",\"receipt_valid\":true,\"revision\":1,\"task_id\":\"T-DEMO-01\"}",
+            "935f89fc7b70c30a9b85650cb427b85b039c158de50a9620691cc0e9889a1a87"
+          ]
+        ],
+        "created": 1
+      }
+    },
+    {
+      "stage": "verified-rollback",
+      "process_healthy": true,
+      "facts": {
+        "code": true,
+        "config": true,
+        "data": true,
+        "identity": true,
+        "cache": true
+      },
+      "accepted": true,
+      "observed": {
+        "revision": "r1",
+        "healthy": true,
+        "config": {
+          "policy": "P20-A@2.0",
+          "transport": "stdio"
+        },
+        "authority": [
+          "read"
+        ],
+        "effective": [
+          "read"
+        ],
+        "tickets": [
+          [
+            "course",
+            "T-DEMO-01:1:create",
+            "{\"amount\":250,\"domestic\":true,\"policy_version\":\"P20-A@2.0\",\"receipt_valid\":true,\"revision\":1,\"task_id\":\"T-DEMO-01\"}",
+            "935f89fc7b70c30a9b85650cb427b85b039c158de50a9620691cc0e9889a1a87"
+          ]
+        ],
+        "created": 1
+      }
+    }
+  ],
+  "production_authorized": false,
+  "delayed_alert": {
+    "received_after": "verified-rollback",
+    "measured_at": "config-drift",
+    "historical_alarm": true,
+    "current_alarm": false
+  },
+  "result": "drill-passed"
+}
