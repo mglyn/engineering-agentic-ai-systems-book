@@ -125,7 +125,7 @@ python examples/ch39/ci/drill.py --output outputs/ch39/client-01 --fault client-
 
 ## 39.6 接班人拿到什么
 
-交接包位于 `examples/ch39/`。release_checklist.md 说明发布前查什么，rollback_runbook.md 说明事故后按什么顺序查，release_report.md 对照已运行的三种结果，final_capstone_rubric.md 供教师或另一组同学验收。原始记录保留机器决定和人工审阅状态。另一位同学可以在干净检出中重新运行，核对逻辑结果，记录环境差异并撰写自己的审阅意见。[附录 C 接口](../appendix_c_schemas.md) · [附录 D 部署](../appendix_d_deployment.md) · [附录 F 安全](../appendix_f_security.md)
+交接包位于 `examples/ch39/`。release_checklist.md 说明发布前查什么，rollback_runbook.md 说明事故后按什么顺序查，release_report.md 对照已运行的四种结果，final_capstone_rubric.md 供教师或另一组同学验收。原始记录保留机器决定和人工审阅状态。另一位同学可以在干净检出中重新运行，核对逻辑结果，记录环境差异并撰写自己的审阅意见。[附录 C 接口](../appendix_c_schemas.md) · [附录 D 部署](../appendix_d_deployment.md) · [附录 F 安全](../appendix_f_security.md)
 
 1. 一次演练里，为什么所有进程都能正常返回，业务仍会连续失败两次？
 2. 怎样证明回滚后读到的还是之前获批的那张申请？只看工单总数会漏掉哪些变化？
@@ -133,4 +133,4 @@ python examples/ch39/ci/drill.py --output outputs/ch39/client-01 --fault client-
 4. 同一条告警在故障时与恢复后到达，值班人应分别在什么证据上做决定？
 5. 第 38 章回归通过，这次预发布也通过。把其中哪项批准交给自动脚本会越过本实验的授权边界？
 
-**实践题。** 提交一次正常演练和两次阻断演练的报告。选择第四阶段，说明只看进程状态的同学会做出什么决定，你依据哪个观察值要求暂停。由另一人从新目录重跑，记录人工判定、允许的范围与尚未覆盖的生产条件。评分项见综合项目量规。
+**实践题。** 提交一次正常演练和三次阻断演练的报告。在客户端回归这一组，按 release.json 的摘要核对 gate.json，再指出第一处多发的调用。选择第四阶段，说明只看进程状态的同学会做出什么决定，你依据哪个观察值要求暂停。由另一人从新目录重跑，记录人工判定、允许的范围与尚未覆盖的生产条件。评分项见综合项目量规。
