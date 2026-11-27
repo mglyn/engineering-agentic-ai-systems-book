@@ -1,0 +1,978 @@
+[
+  {
+    "case": "receipt-01",
+    "scenario": "aligned",
+    "policy": "arrival",
+    "audio_duration_ms": 3038,
+    "expected": "receipt-01-R",
+    "correct": true,
+    "object_id": "receipt-01-R",
+    "turn_used": 2,
+    "source_turn": 2,
+    "selected_ref": "page@2",
+    "decision_ms": 1250,
+    "wait_ms": 0,
+    "action": "image",
+    "notes": [
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": 190
+  },
+  {
+    "case": "receipt-01",
+    "scenario": "aligned",
+    "policy": "bound",
+    "audio_duration_ms": 3038,
+    "expected": "receipt-01-R",
+    "correct": true,
+    "object_id": "receipt-01-R",
+    "turn_used": 2,
+    "source_turn": 2,
+    "selected_ref": "page@2",
+    "decision_ms": 1250,
+    "wait_ms": 0,
+    "action": "image",
+    "notes": [
+      [
+        400,
+        "other_turn"
+      ],
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": 190
+  },
+  {
+    "case": "receipt-02",
+    "scenario": "previous_turn",
+    "policy": "arrival",
+    "audio_duration_ms": 3238,
+    "expected": "receipt-02-R",
+    "correct": false,
+    "object_id": "receipt-02-R-old",
+    "turn_used": 2,
+    "source_turn": 1,
+    "selected_ref": "page@1",
+    "decision_ms": 1250,
+    "wait_ms": 0,
+    "action": "image",
+    "notes": [
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": 890
+  },
+  {
+    "case": "receipt-02",
+    "scenario": "previous_turn",
+    "policy": "bound",
+    "audio_duration_ms": 3238,
+    "expected": "receipt-02-R",
+    "correct": true,
+    "object_id": "receipt-02-R",
+    "turn_used": 2,
+    "source_turn": 2,
+    "selected_ref": "page@2",
+    "decision_ms": 1250,
+    "wait_ms": 0,
+    "action": "image",
+    "notes": [
+      [
+        1200,
+        "other_turn"
+      ],
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": 190
+  },
+  {
+    "case": "receipt-03",
+    "scenario": "late_frame",
+    "policy": "arrival",
+    "audio_duration_ms": 3258,
+    "expected": "receipt-03-R",
+    "correct": false,
+    "object_id": "receipt-03-R-old",
+    "turn_used": 2,
+    "source_turn": 1,
+    "selected_ref": "page@1",
+    "decision_ms": 1250,
+    "wait_ms": 0,
+    "action": "image",
+    "notes": [
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": 890
+  },
+  {
+    "case": "receipt-03",
+    "scenario": "late_frame",
+    "policy": "bound",
+    "audio_duration_ms": 3258,
+    "expected": "receipt-03-R",
+    "correct": true,
+    "object_id": "receipt-03-R",
+    "turn_used": 2,
+    "source_turn": 2,
+    "selected_ref": "page@2",
+    "decision_ms": 1360,
+    "wait_ms": 110,
+    "action": "image",
+    "notes": [
+      [
+        400,
+        "other_turn"
+      ],
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": 190
+  },
+  {
+    "case": "receipt-04",
+    "scenario": "missing_frame",
+    "policy": "arrival",
+    "audio_duration_ms": 3173,
+    "expected": null,
+    "correct": false,
+    "object_id": "receipt-04-R-old",
+    "turn_used": 2,
+    "source_turn": 1,
+    "selected_ref": "page@1",
+    "decision_ms": 1250,
+    "wait_ms": 0,
+    "action": "image",
+    "notes": [
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": 890
+  },
+  {
+    "case": "receipt-04",
+    "scenario": "missing_frame",
+    "policy": "bound",
+    "audio_duration_ms": 3173,
+    "expected": null,
+    "correct": true,
+    "object_id": null,
+    "turn_used": 2,
+    "source_turn": null,
+    "selected_ref": null,
+    "decision_ms": 1450,
+    "wait_ms": 200,
+    "action": "clarify_object",
+    "notes": [
+      [
+        400,
+        "other_turn"
+      ],
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": null
+  },
+  {
+    "case": "receipt-05",
+    "scenario": "revised_transcript",
+    "policy": "arrival",
+    "audio_duration_ms": 4753,
+    "expected": "receipt-05-R",
+    "correct": true,
+    "object_id": "receipt-05-R",
+    "turn_used": 2,
+    "source_turn": 2,
+    "selected_ref": "page@2",
+    "decision_ms": 1250,
+    "wait_ms": 0,
+    "action": "image",
+    "notes": [
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": 190
+  },
+  {
+    "case": "receipt-05",
+    "scenario": "revised_transcript",
+    "policy": "bound",
+    "audio_duration_ms": 4753,
+    "expected": "receipt-05-R",
+    "correct": true,
+    "object_id": "receipt-05-R",
+    "turn_used": 2,
+    "source_turn": 2,
+    "selected_ref": "page@2",
+    "decision_ms": 1250,
+    "wait_ms": 0,
+    "action": "image",
+    "notes": [
+      [
+        400,
+        "other_turn"
+      ],
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": 190
+  },
+  {
+    "case": "receipt-06",
+    "scenario": "old_transcript",
+    "policy": "arrival",
+    "audio_duration_ms": 3208,
+    "expected": "receipt-06-R",
+    "correct": false,
+    "object_id": "receipt-06-L",
+    "turn_used": 1,
+    "source_turn": 2,
+    "selected_ref": "page@2",
+    "decision_ms": 1230,
+    "wait_ms": 0,
+    "action": "image",
+    "notes": [
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": -450
+  },
+  {
+    "case": "receipt-06",
+    "scenario": "old_transcript",
+    "policy": "bound",
+    "audio_duration_ms": 3208,
+    "expected": "receipt-06-R",
+    "correct": true,
+    "object_id": "receipt-06-R",
+    "turn_used": 2,
+    "source_turn": 2,
+    "selected_ref": "page@2",
+    "decision_ms": 1250,
+    "wait_ms": 0,
+    "action": "image",
+    "notes": [
+      [
+        400,
+        "other_turn"
+      ],
+      [
+        1210,
+        "partial"
+      ],
+      [
+        1230,
+        "other_turn"
+      ]
+    ],
+    "capture_offset_ms": 190
+  },
+  {
+    "case": "receipt-07",
+    "scenario": "overlap",
+    "policy": "arrival",
+    "audio_duration_ms": 3198,
+    "expected": null,
+    "correct": false,
+    "object_id": "receipt-07-L",
+    "turn_used": 2,
+    "source_turn": 2,
+    "selected_ref": "page@2",
+    "decision_ms": 1220,
+    "wait_ms": 0,
+    "action": "image",
+    "notes": [
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": 180
+  },
+  {
+    "case": "receipt-07",
+    "scenario": "overlap",
+    "policy": "bound",
+    "audio_duration_ms": 3198,
+    "expected": null,
+    "correct": true,
+    "object_id": null,
+    "turn_used": 2,
+    "source_turn": null,
+    "selected_ref": null,
+    "decision_ms": 1250,
+    "wait_ms": 0,
+    "action": "clarify_speaker",
+    "notes": [
+      [
+        400,
+        "other_turn"
+      ],
+      [
+        1210,
+        "partial"
+      ],
+      [
+        1220,
+        "speaker_ambiguous"
+      ]
+    ],
+    "capture_offset_ms": null
+  },
+  {
+    "case": "receipt-08",
+    "scenario": "expired_frame",
+    "policy": "arrival",
+    "audio_duration_ms": 3218,
+    "expected": null,
+    "correct": false,
+    "object_id": "receipt-08-R",
+    "turn_used": 2,
+    "source_turn": 2,
+    "selected_ref": "page@2",
+    "decision_ms": 1250,
+    "wait_ms": 0,
+    "action": "image",
+    "notes": [
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": 590
+  },
+  {
+    "case": "receipt-08",
+    "scenario": "expired_frame",
+    "policy": "bound",
+    "audio_duration_ms": 3218,
+    "expected": null,
+    "correct": true,
+    "object_id": null,
+    "turn_used": 2,
+    "source_turn": null,
+    "selected_ref": null,
+    "decision_ms": 1450,
+    "wait_ms": 200,
+    "action": "clarify_object",
+    "notes": [
+      [
+        400,
+        "other_turn"
+      ],
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": null
+  },
+  {
+    "case": "receipt-09",
+    "scenario": "after_deadline",
+    "policy": "arrival",
+    "audio_duration_ms": 3258,
+    "expected": null,
+    "correct": false,
+    "object_id": "receipt-09-R-old",
+    "turn_used": 2,
+    "source_turn": 1,
+    "selected_ref": "page@1",
+    "decision_ms": 1250,
+    "wait_ms": 0,
+    "action": "image",
+    "notes": [
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": 890
+  },
+  {
+    "case": "receipt-09",
+    "scenario": "after_deadline",
+    "policy": "bound",
+    "audio_duration_ms": 3258,
+    "expected": null,
+    "correct": true,
+    "object_id": null,
+    "turn_used": 2,
+    "source_turn": null,
+    "selected_ref": null,
+    "decision_ms": 1450,
+    "wait_ms": 200,
+    "action": "clarify_object",
+    "notes": [
+      [
+        400,
+        "other_turn"
+      ],
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": null
+  },
+  {
+    "case": "receipt-10",
+    "scenario": "file_fallback",
+    "policy": "arrival",
+    "audio_duration_ms": 3228,
+    "expected": "receipt-10-R",
+    "correct": false,
+    "object_id": "receipt-10-R-old",
+    "turn_used": 2,
+    "source_turn": 1,
+    "selected_ref": "page@1",
+    "decision_ms": 1250,
+    "wait_ms": 0,
+    "action": "image",
+    "notes": [
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": 890
+  },
+  {
+    "case": "receipt-10",
+    "scenario": "file_fallback",
+    "policy": "bound",
+    "audio_duration_ms": 3228,
+    "expected": "receipt-10-R",
+    "correct": true,
+    "object_id": "receipt-10-R",
+    "turn_used": 2,
+    "source_turn": 2,
+    "selected_ref": "page@2",
+    "decision_ms": 1330,
+    "wait_ms": 80,
+    "action": "file",
+    "notes": [
+      [
+        400,
+        "other_turn"
+      ],
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": 180
+  },
+  {
+    "case": "receipt-11",
+    "scenario": "aligned",
+    "policy": "arrival",
+    "audio_duration_ms": 3053,
+    "expected": "receipt-11-L",
+    "correct": true,
+    "object_id": "receipt-11-L",
+    "turn_used": 2,
+    "source_turn": 2,
+    "selected_ref": "page@2",
+    "decision_ms": 1250,
+    "wait_ms": 0,
+    "action": "image",
+    "notes": [
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": 190
+  },
+  {
+    "case": "receipt-11",
+    "scenario": "aligned",
+    "policy": "bound",
+    "audio_duration_ms": 3053,
+    "expected": "receipt-11-L",
+    "correct": true,
+    "object_id": "receipt-11-L",
+    "turn_used": 2,
+    "source_turn": 2,
+    "selected_ref": "page@2",
+    "decision_ms": 1250,
+    "wait_ms": 0,
+    "action": "image",
+    "notes": [
+      [
+        400,
+        "other_turn"
+      ],
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": 190
+  },
+  {
+    "case": "receipt-12",
+    "scenario": "previous_turn",
+    "policy": "arrival",
+    "audio_duration_ms": 3253,
+    "expected": "receipt-12-L",
+    "correct": false,
+    "object_id": "receipt-12-L-old",
+    "turn_used": 2,
+    "source_turn": 1,
+    "selected_ref": "page@1",
+    "decision_ms": 1250,
+    "wait_ms": 0,
+    "action": "image",
+    "notes": [
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": 890
+  },
+  {
+    "case": "receipt-12",
+    "scenario": "previous_turn",
+    "policy": "bound",
+    "audio_duration_ms": 3253,
+    "expected": "receipt-12-L",
+    "correct": true,
+    "object_id": "receipt-12-L",
+    "turn_used": 2,
+    "source_turn": 2,
+    "selected_ref": "page@2",
+    "decision_ms": 1250,
+    "wait_ms": 0,
+    "action": "image",
+    "notes": [
+      [
+        1200,
+        "other_turn"
+      ],
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": 190
+  },
+  {
+    "case": "receipt-13",
+    "scenario": "late_frame",
+    "policy": "arrival",
+    "audio_duration_ms": 3273,
+    "expected": "receipt-13-L",
+    "correct": false,
+    "object_id": "receipt-13-L-old",
+    "turn_used": 2,
+    "source_turn": 1,
+    "selected_ref": "page@1",
+    "decision_ms": 1250,
+    "wait_ms": 0,
+    "action": "image",
+    "notes": [
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": 890
+  },
+  {
+    "case": "receipt-13",
+    "scenario": "late_frame",
+    "policy": "bound",
+    "audio_duration_ms": 3273,
+    "expected": "receipt-13-L",
+    "correct": true,
+    "object_id": "receipt-13-L",
+    "turn_used": 2,
+    "source_turn": 2,
+    "selected_ref": "page@2",
+    "decision_ms": 1360,
+    "wait_ms": 110,
+    "action": "image",
+    "notes": [
+      [
+        400,
+        "other_turn"
+      ],
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": 190
+  },
+  {
+    "case": "receipt-14",
+    "scenario": "missing_frame",
+    "policy": "arrival",
+    "audio_duration_ms": 3188,
+    "expected": null,
+    "correct": false,
+    "object_id": "receipt-14-L-old",
+    "turn_used": 2,
+    "source_turn": 1,
+    "selected_ref": "page@1",
+    "decision_ms": 1250,
+    "wait_ms": 0,
+    "action": "image",
+    "notes": [
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": 890
+  },
+  {
+    "case": "receipt-14",
+    "scenario": "missing_frame",
+    "policy": "bound",
+    "audio_duration_ms": 3188,
+    "expected": null,
+    "correct": true,
+    "object_id": null,
+    "turn_used": 2,
+    "source_turn": null,
+    "selected_ref": null,
+    "decision_ms": 1450,
+    "wait_ms": 200,
+    "action": "clarify_object",
+    "notes": [
+      [
+        400,
+        "other_turn"
+      ],
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": null
+  },
+  {
+    "case": "receipt-15",
+    "scenario": "revised_transcript",
+    "policy": "arrival",
+    "audio_duration_ms": 4728,
+    "expected": "receipt-15-L",
+    "correct": true,
+    "object_id": "receipt-15-L",
+    "turn_used": 2,
+    "source_turn": 2,
+    "selected_ref": "page@2",
+    "decision_ms": 1250,
+    "wait_ms": 0,
+    "action": "image",
+    "notes": [
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": 190
+  },
+  {
+    "case": "receipt-15",
+    "scenario": "revised_transcript",
+    "policy": "bound",
+    "audio_duration_ms": 4728,
+    "expected": "receipt-15-L",
+    "correct": true,
+    "object_id": "receipt-15-L",
+    "turn_used": 2,
+    "source_turn": 2,
+    "selected_ref": "page@2",
+    "decision_ms": 1250,
+    "wait_ms": 0,
+    "action": "image",
+    "notes": [
+      [
+        400,
+        "other_turn"
+      ],
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": 190
+  },
+  {
+    "case": "receipt-16",
+    "scenario": "old_transcript",
+    "policy": "arrival",
+    "audio_duration_ms": 3223,
+    "expected": "receipt-16-L",
+    "correct": false,
+    "object_id": "receipt-16-R",
+    "turn_used": 1,
+    "source_turn": 2,
+    "selected_ref": "page@2",
+    "decision_ms": 1230,
+    "wait_ms": 0,
+    "action": "image",
+    "notes": [
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": -450
+  },
+  {
+    "case": "receipt-16",
+    "scenario": "old_transcript",
+    "policy": "bound",
+    "audio_duration_ms": 3223,
+    "expected": "receipt-16-L",
+    "correct": true,
+    "object_id": "receipt-16-L",
+    "turn_used": 2,
+    "source_turn": 2,
+    "selected_ref": "page@2",
+    "decision_ms": 1250,
+    "wait_ms": 0,
+    "action": "image",
+    "notes": [
+      [
+        400,
+        "other_turn"
+      ],
+      [
+        1210,
+        "partial"
+      ],
+      [
+        1230,
+        "other_turn"
+      ]
+    ],
+    "capture_offset_ms": 190
+  },
+  {
+    "case": "receipt-17",
+    "scenario": "overlap",
+    "policy": "arrival",
+    "audio_duration_ms": 3208,
+    "expected": null,
+    "correct": false,
+    "object_id": "receipt-17-R",
+    "turn_used": 2,
+    "source_turn": 2,
+    "selected_ref": "page@2",
+    "decision_ms": 1220,
+    "wait_ms": 0,
+    "action": "image",
+    "notes": [
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": 180
+  },
+  {
+    "case": "receipt-17",
+    "scenario": "overlap",
+    "policy": "bound",
+    "audio_duration_ms": 3208,
+    "expected": null,
+    "correct": true,
+    "object_id": null,
+    "turn_used": 2,
+    "source_turn": null,
+    "selected_ref": null,
+    "decision_ms": 1250,
+    "wait_ms": 0,
+    "action": "clarify_speaker",
+    "notes": [
+      [
+        400,
+        "other_turn"
+      ],
+      [
+        1210,
+        "partial"
+      ],
+      [
+        1220,
+        "speaker_ambiguous"
+      ]
+    ],
+    "capture_offset_ms": null
+  },
+  {
+    "case": "receipt-18",
+    "scenario": "expired_frame",
+    "policy": "arrival",
+    "audio_duration_ms": 3233,
+    "expected": null,
+    "correct": false,
+    "object_id": "receipt-18-L",
+    "turn_used": 2,
+    "source_turn": 2,
+    "selected_ref": "page@2",
+    "decision_ms": 1250,
+    "wait_ms": 0,
+    "action": "image",
+    "notes": [
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": 590
+  },
+  {
+    "case": "receipt-18",
+    "scenario": "expired_frame",
+    "policy": "bound",
+    "audio_duration_ms": 3233,
+    "expected": null,
+    "correct": true,
+    "object_id": null,
+    "turn_used": 2,
+    "source_turn": null,
+    "selected_ref": null,
+    "decision_ms": 1450,
+    "wait_ms": 200,
+    "action": "clarify_object",
+    "notes": [
+      [
+        400,
+        "other_turn"
+      ],
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": null
+  },
+  {
+    "case": "receipt-19",
+    "scenario": "after_deadline",
+    "policy": "arrival",
+    "audio_duration_ms": 3273,
+    "expected": null,
+    "correct": false,
+    "object_id": "receipt-19-L-old",
+    "turn_used": 2,
+    "source_turn": 1,
+    "selected_ref": "page@1",
+    "decision_ms": 1250,
+    "wait_ms": 0,
+    "action": "image",
+    "notes": [
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": 890
+  },
+  {
+    "case": "receipt-19",
+    "scenario": "after_deadline",
+    "policy": "bound",
+    "audio_duration_ms": 3273,
+    "expected": null,
+    "correct": true,
+    "object_id": null,
+    "turn_used": 2,
+    "source_turn": null,
+    "selected_ref": null,
+    "decision_ms": 1450,
+    "wait_ms": 200,
+    "action": "clarify_object",
+    "notes": [
+      [
+        400,
+        "other_turn"
+      ],
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": null
+  },
+  {
+    "case": "receipt-20",
+    "scenario": "file_fallback",
+    "policy": "arrival",
+    "audio_duration_ms": 3238,
+    "expected": "receipt-20-L",
+    "correct": false,
+    "object_id": "receipt-20-L-old",
+    "turn_used": 2,
+    "source_turn": 1,
+    "selected_ref": "page@1",
+    "decision_ms": 1250,
+    "wait_ms": 0,
+    "action": "image",
+    "notes": [
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": 890
+  },
+  {
+    "case": "receipt-20",
+    "scenario": "file_fallback",
+    "policy": "bound",
+    "audio_duration_ms": 3238,
+    "expected": "receipt-20-L",
+    "correct": true,
+    "object_id": "receipt-20-L",
+    "turn_used": 2,
+    "source_turn": 2,
+    "selected_ref": "page@2",
+    "decision_ms": 1330,
+    "wait_ms": 80,
+    "action": "file",
+    "notes": [
+      [
+        400,
+        "other_turn"
+      ],
+      [
+        1210,
+        "partial"
+      ]
+    ],
+    "capture_offset_ms": 180
+  }
+]
